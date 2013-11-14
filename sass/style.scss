@@ -1,0 +1,53 @@
+/*
+Theme Name: vftr
+Author: Robin Hoover
+
+Original Theme URI: http://underscores.me/
+Original Author URI: http://underscores.me/
+
+Description: Valley Forge Trail Riders - Home of the Moonshine Enduro
+
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: vftr
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ vftr is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+*/
+
+//Plugins
+@import "susy";
+
+//Compass Core
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/utilities";
+@import "compass/layout";
+
+//Globals
+@import "globals/susy-base";
+@import "globals/typography";
+@import "globals/vertical-rhythm";
+@import "globals/mixins";
+@import "globals/colors";
+
+//Layout
+@import "layout/body";
+@import "layout/header";
+@import "layout/nav";
+@import "layout/content";
+@import "layout/section-primary";
+
+//Design
+@import "design/body";
+@import "design/header";
+@import "design/nav";
+@import "design/content";
+@import "design/section-primary";
+

@@ -1,0 +1,105 @@
+%content {
+    @include container;
+    // @include susy-grid-background;
+    min-height: 100%;
+    @include at-breakpoint($break-to-medium) {
+        @include container;
+        @include susy-grid-background;
+    }
+    @include at-breakpoint($break-to-medium-large) {
+        @include container;
+        @include susy-grid-background;
+    }
+    @include at-breakpoint($break-to-large) {
+        @include container;
+        @include susy-grid-background;
+    }
+}
+
+%responsive-trigger {
+    &:after {
+        content: "phone";
+        display: none;
+        @include at-breakpoint($break-to-medium) {
+            content: "tablet";
+        }
+        @include at-breakpoint($break-to-medium-large) {
+            content: "small-desktop"
+        }
+        @include at-breakpoint($break-to-large) {
+            content: "large-desktop"
+        }
+    }
+}
+// Courtesy: http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+$icons: (
+    'menu' '\e600',
+    'back' '\e601',
+    'facebook' '\e602',
+    'home' '\e603',
+    'results' '\e604',
+    'videos' '\e605',
+    'people' '\e606',
+    'maps' '\e607',
+    'photos' '\e608',
+    'businesses' '\e609',
+    'search' '\e610',
+    'arrowdown' '\e611',
+    'mail' '\e612',
+    'about' '\e613',
+    'arrowup' '\e614',
+    'news' '\e60a',
+    'form' '\e60b',
+    'phone' '\e60c',
+    'link' '\e60d',
+    'shopping' '\e60e',
+    'twitter' '\e60f'
+);
+@function match($haystack, $needle) {
+    @each $item in $haystack {
+        $index: index($item, $needle);
+        @if $index {
+            $return: if($index == 1, 2, $index);
+            @return nth($item, $return);
+        }
+    }
+    @return false;
+}
+@mixin icon($position: 'before', $styles: true, $icon: false) {
+    // Either a :before or :after pseudo-element, defaulting to :before
+    &:#{$position} {
+        @if $icon {
+            // Icon has been specified
+            content: match($icons, $icon);
+        }
+        @if $styles {
+            // Supportive icon styles have been specified
+            color: desaturate($yellow, 25%);
+            font: {
+                style: normal;
+                variant: normal;
+                weight: normal;
+                family: $vftr;
+            }
+            // @include adjust-font-size-to(14px);
+            padding-right: $grid-padding/2;
+            // @include adjust-font-size-to(25px);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-transform: none;
+            speak: none;
+        }
+        // Include any extra rules supplied for the pseudo-element
+        @content;
+    }
+}
+
+%small-menu-icon {
+    &:before {
+        @include adjust-font-size-to(16px);
+        padding-right: $grid-padding;
+        @include at-breakpoint($break-to-medium-large) {
+            display: none;
+        }
+    }
+}

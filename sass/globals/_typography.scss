@@ -1,0 +1,12 @@
+@include font-face('Fabrica', font-files(
+    'fabrica-webfont.woff',woff,
+    'fabrica-webfont.ttf', ttf,
+    'fabrica-webfont.svg', svg),
+    'fabrica-webfont.eot');
+    $Fabrica: 'Fabrica', arial, sans-serif;
+@include font-face('VFTR', font-files(
+    'vftr.woff',woff,
+    'vftr.ttf', ttf,
+    'vftr.svg', svg),
+    'vftr.eot');
+    $vftr: 'vftr', arial, sans-serif;

@@ -1,0 +1,27 @@
+body {
+    background-color: lighten($yellow, 25%);
+    @extend %responsive-trigger;
+    //Responsive Image Solution
+    //Inspired by: http://tech.particulate.me/javascript/2013/10/10/how-to-conveniently-check-for-responsive-breakpoints-in-javascript/
+    // &:after {
+    //     content: "phone";
+    //     display: none;
+    //     @include at-breakpoint($break-to-medium) {
+    //         content: "tablet";
+    //     }
+    //     @include at-breakpoint($break-to-medium-large) {
+    //         content: "small-desktop"
+    //     }
+    //     @include at-breakpoint($break-to-large) {
+    //         content: "large-desktop"
+    //     }
+    // }
+}
+a {
+    text-decoration: none;
+}
+.bg-small {
+    background: url('images/bg-mobile.jpg') no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}

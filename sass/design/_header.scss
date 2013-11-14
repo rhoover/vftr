@@ -1,0 +1,36 @@
+.header {
+    color: desaturate($yellow, 25%);
+    background-color: rgba(darken($green-mute, 7%), .95);
+    border-bottom: .1em solid rgba(darken($green-mute, 20%), .75);
+    @include at-breakpoint($break-to-medium-large) {
+        border-top: .1em solid rgba($black, .65);
+        border-bottom: .1em solid rgba($black, .65);
+        @include box-shadow(inset 0px 1px 0px 0px rgba($white, .20));
+    }
+}
+.mobile-back-button {
+    @include icon('before', true, 'back');
+    -webkit-tap-highlight-color: rgba(darken($green-mute, 20%), .65);
+    @include adjust-font-size-to(25px);
+    &:active {
+        background-color: rgba(darken($green-mute, 20%), .65);
+        border-radius: .25em;
+    }
+}
+.title {
+    @include adjust-font-size-to(22px);
+    text-align: center;
+    font-weight: bold;
+    @include at-breakpoint($break-to-medium-large) {
+        text-align: left;
+    }
+}
+.mobile-menu-button {
+    @include icon('before', true, 'menu');
+    @include adjust-font-size-to(25px);
+    -webkit-tap-highlight-color: rgba(darken($green-mute, 20%), .65);
+    &:active {
+        background-color: rgba(darken($green-mute, 20%), .65);
+        border-radius: .25em;
+    }
+}

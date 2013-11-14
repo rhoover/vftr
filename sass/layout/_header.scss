@@ -1,0 +1,38 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: rhythm(.25, 16px);
+    padding-bottom: rhythm(.25, 16px);
+    @include pad(1,1);
+    z-index: 100;
+    @include at-breakpoint($break-to-medium-large) {
+        height: rhythm(4, 16px);
+        position: relative;
+        margin-top: rhythm(3, 16px);
+    }
+}
+.mobile-back-button {
+    @include span-columns(2, 12);
+    &:before {
+        padding: 0 0 0 $grid-padding/4;
+    }
+    @include at-breakpoint($break-to-medium-large) {
+        display: none;
+    }
+}
+.title {
+    @include span-columns(8, 12);
+    @include at-breakpoint($break-to-medium-large) {
+        @include span-columns (8, 24);
+    }
+}
+.mobile-menu-button {
+    @include span-columns(2 omega, 12);
+    &:before {
+        padding: 0 0 0 $grid-padding/4;
+    }
+    @include at-breakpoint($break-to-medium-large) {
+        display: none;
+    }
+}

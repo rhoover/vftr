@@ -1,0 +1,28 @@
+.nav {
+    position: absolute;
+    top: rhythm(2.05, 16px);
+    height: 100%;
+    // @include span-columns(8, 12);
+    @include translate3d(-100%, 0, 0);
+}
+.menu-item {
+    @include span-columns(12, 12);
+    @include pad(1,0);
+    padding-top: rhythm(.25, 16px);
+    padding-bottom: rhythm(.25, 16px);
+    // &:before {
+    //     @include adjust-font-size-to(12px);
+    //     padding-right: $grid-padding/2;
+    // }
+}
+//AngularJS Mobile Behavior
+.navmove-add, .navmove-remove {
+    @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+
+}
+.navmove, .navmove-add.navmove-add-active {
+  @include translate3d(0%, 0, 0);
+}
+.navmove-remove.navmove-remove-active {
+  @include translate3d(-100%, 0, 0);
+}

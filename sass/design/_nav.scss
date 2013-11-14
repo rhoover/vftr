@@ -1,0 +1,16 @@
+.nav {
+    @include background-image(linear-gradient(rgba(darken($green-mute, 7%), .93) , rgba(darken($green-mute, 20%), .93)));
+    border-right: .15em solid rgba(darken($green-dark, 15%), .65);
+}
+.menu-item {
+    color: $white;
+    border-bottom: .1em solid rgba(darken($green-dark, 15%), .5);
+    @include box-shadow(inset 0px 1px 0px 0px rgba($white, .15));
+}
+
+.home-icon {
+    @include icon('before', true, 'home');
+}
+.sample-icon {
+    @include icon('before', true, 'about');
+}

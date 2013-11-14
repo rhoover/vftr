@@ -1,0 +1,17 @@
+{
+  "name": "vftr",
+  "version": "0.1.0",
+  "authors": [
+    "robinHoover <robin.hoover@gmail.com>"
+  ],
+  "description": "The Club",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.2.0",
+    "angular-touch": "~1.2.0",
+    "angular-route": "~1.2.0",
+    "angular-animate": "~1.2.0",
+    "json3": "~3.2.5",
+    "es5-shim": "~2.1.0"
+  }
+}

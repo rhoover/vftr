@@ -1,0 +1,9 @@
+.content {
+    @extend %content;
+    @include pad(1, 1);
+    margin-top: rhythm(7, 16px);
+    padding-top: rhythm(1, 16px);
+    @include at-breakpoint($break-to-large) {
+        @include pad(4, 4);
+    }
+}
