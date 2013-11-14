@@ -69,7 +69,8 @@
 
     <header class="header">
         <span backbutton class="mobile-back-button"></span>
-        <h1 class="title"><?php bloginfo( 'name' ); ?></h1>
+        <h1 class="title-small">VFTR</h1>
+        <h1 class="title-large">Valley Forge Trail Riders</h1>
         <span class="mobile-menu-button" ng-click="AppCtrl.moveMenu()"></span>
     </header><!-- .header -->
 

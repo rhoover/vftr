@@ -21,10 +21,16 @@
         display: none;
     }
 }
-.title {
+.title-small {
     @include span-columns(8, 12);
     @include at-breakpoint($break-to-medium-large) {
-        @include span-columns (8, 24);
+        display: none;
+    }
+}
+.title-large {
+    display: none;
+    @include at-breakpoint($break-to-medium-large) {
+        display: inline-block;
     }
 }
 .mobile-menu-button {

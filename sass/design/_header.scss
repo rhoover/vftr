@@ -17,13 +17,14 @@
         border-radius: .25em;
     }
 }
-.title {
+.title-small {
     @include adjust-font-size-to(22px);
     text-align: center;
     font-weight: bold;
-    @include at-breakpoint($break-to-medium-large) {
-        text-align: left;
-    }
+}
+
+.title-large {
+    @include adjust-font-size-to(35px);
 }
 .mobile-menu-button {
     @include icon('before', true, 'menu');

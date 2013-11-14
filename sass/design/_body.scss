@@ -25,3 +25,11 @@ a {
     background-attachment: fixed;
     background-size: cover;
 }
+.bg-small-desktop {
+    background: url('images/bg-desktop.jpg') no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.bg-large-desktop {
+    @extend .bg-small-desktop
+}
