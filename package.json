@@ -1,0 +1,22 @@
+{
+  "name": "vftr",
+  "version": "0.0.0",
+  "description": "Home of the Moonshine Enduro",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin Hoover",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-rev": "~0.1.0",
+    "grunt-usemin": "~2.0.0",
+    "load-grunt-tasks": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-ftp-deploy": "0.0.10"
+  }
+}

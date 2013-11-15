@@ -13,7 +13,7 @@ angular.module('vftrApp', ['ngRoute', 'ngAnimate', 'ngTouch']),
 
 // Controllers
 
-    angular.module("vftrApp").controller('AppCtrl', ['$scope', function ($scope) {
+    angular.module("vftrApp").controller('RootCtrl', ['$scope', function ($scope) {
         $scope.moveMenu = false;
         this.moveMenu = function () {
             $scope.moveMenu = !$scope.moveMenu;

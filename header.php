@@ -7,7 +7,7 @@
  * @package vftr
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> ng-app="vftrApp" ng-controller="RootCtrl" background ng-cloak>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -63,7 +63,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body ng-app="vftrApp" ng-controller="AppCtrl" background ng-cloak>
+<body>
 
     <?php do_action( 'before' ); ?>
 

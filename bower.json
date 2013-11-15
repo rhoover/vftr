@@ -4,7 +4,7 @@
   "authors": [
     "robinHoover <robin.hoover@gmail.com>"
   ],
-  "description": "The Club",
+  "description": "Home of the Moonshine Enduro",
   "license": "MIT",
   "dependencies": {
     "angular": "~1.2.0",
