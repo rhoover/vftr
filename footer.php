@@ -20,11 +20,17 @@
 <?php wp_footer(); ?>
 
 <script src="<?php bloginfo('template_url'); ?>/bower_components/angular/angular.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/bower_components/angular-animate/angular-animate.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/bower_components/angular-route/angular-route.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/bower_components/angular-touch/angular-touch.js"></script>
-
+<script src="<?php bloginfo('template_url'); ?>/bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/bower_components/angular-route/angular-route.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/bower_components/angular-touch/angular-touch.min.js"></script>
+<!--
 <script src="<?php bloginfo('template_url'); ?>/js/vftr-angular.js"></script>
+-->
+<script src="<?php bloginfo('template_url'); ?>/js/vftr-angular/app.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/vftr-angular/controllers/root.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/vftr-angular/directives/responsive-bg.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/vftr-angular/directives/mobile-nav-move.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/vftr-angular/directives/mobile-backbutton.js"></script>
 
 </body>
 </html>
