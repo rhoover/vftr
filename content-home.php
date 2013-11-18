@@ -6,16 +6,9 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="article"> <!-- <?php post_class(); ?> -->
-
-    <?php the_content(); ?>
-
-    <?php
-        wp_link_pages( array(
-            'before' => '<div class="page-links">' . __( 'Pages:', 'vftr' ),
-            'after'  => '</div>',
-        ) );
-    ?>
-
-<?php edit_post_link( __( 'Edit', 'vftr' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
-</article><!-- #post-## -->
+<a href="" class=" results-icon home-page-item">Results</a>
+<a href="" class="news-icon home-page-item">News</a>
+<a href="" class="maps-icon home-page-item">Locations/Maps</a>
+<a href="" class="about-icon home-page-item">Club Calendar</a>
+<a href="" class="businesses-icon home-page-item">Sponsors</a>
+<a href="" class="videos-icon home-page-item">Videos</a>

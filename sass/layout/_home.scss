@@ -1,0 +1,14 @@
+.home-page-item {
+    @include span-columns(12,12);
+    margin-right: 0;
+    margin-bottom: rhythm(1, 16px);
+    padding: rhythm(.25, 16px) 0;
+    border: .01em solid rgba($green-mute, .5);
+    border-radius: .25em;
+    min-height: rhythm(5, 16px);
+    @include at-breakpoint($break-to-large) {
+        @include span-columns(6, 24);
+        @include remove-nth-omega(6n);
+        @include nth-omega(4n);
+    }
+}

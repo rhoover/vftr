@@ -10,6 +10,8 @@
         height: rhythm(4, 16px);
         position: relative;
         margin-top: rhythm(3, 16px);
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 .mobile-back-button {
@@ -31,6 +33,7 @@
     display: none;
     @include at-breakpoint($break-to-medium-large) {
         display: inline-block;
+        padding: rhythm(.45, 16px) 0;
     }
 }
 .mobile-menu-button {

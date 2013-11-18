@@ -1,0 +1,41 @@
+.home-page-item {
+    color: $black;
+    @include adjust-font-size-to(25px);
+    text-align: center;
+}
+.results-icon{
+    @include icon('before', true, 'results');
+    &:before {
+        color: $green-mute;
+    }
+}
+.news-icon {
+    @include icon('before', true, 'news');
+    &:before {
+        color: $green-mute;
+    }
+}
+.maps-icon {
+    @include icon('before', true, 'maps');
+    &:before {
+        color: $green-mute;
+    }
+}
+.about-icon {
+    @include icon('before', true, 'about');
+    &:before {
+        color: $green-mute;
+    }
+}
+.businesses-icon {
+    @include icon('before', true, 'businesses');
+    &:before {
+        color: $green-mute;
+    }
+}
+.videos-icon {
+    @include icon('before', true, 'videos');
+    &:before {
+        color: $green-mute;
+    }
+}
