@@ -5,6 +5,7 @@
  * @package vftr
  */
 ?>
+<p style="color: white;">I know, this is different from the pictures I sent you. I like this better, please let me know any thoughts!</p>
 
 <a href="#" class="home-page-link"><h2 class="news-icon home-sub-header">News</h2>
     <p class="promo">Helpful Information Will Be Here</p>

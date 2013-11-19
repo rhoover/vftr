@@ -418,7 +418,7 @@ img {
 .content {
   padding-left: 8.47458%;
   padding-right: 8.47458%;
-  margin-top: 10.5em;
+  margin-top: 3em;
   padding-top: 1.5em;
 }
 @media (min-width: 85em) {
@@ -434,6 +434,10 @@ img {
 
 .home-button {
   padding: 0.375em 0.5em;
+}
+
+.promo {
+  padding: 0 0.5em;
 }
 
 .bg-small, .bg-medium {
@@ -550,7 +554,21 @@ a {
   .menu-item {
     border-bottom: none;
     box-shadow: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
   }
+}
+
+.menu-item.fade {
+  -webkit-transition: color 0.3s ease-in, text-shadow 0.3s ease-in;
+  -moz-transition: color 0.3s ease-in, text-shadow 0.3s ease-in;
+  -o-transition: color 0.3s ease-in, text-shadow 0.3s ease-in;
+  transition: color 0.3s ease-in, text-shadow 0.3s ease-in;
+  color: transparent;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+}
+
+.menu-item.hover {
+  color: #ede75c;
 }
 
 .home-icon:before {
@@ -591,21 +609,56 @@ a {
   }
 }
 
-.content {
-  background: rgba(255, 255, 255, 0.93);
+.home-page-item {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .home-page-link {
-  -webkit-transition: border 0.3s ease-in, box-shadow 0.3s ease-in;
-  -moz-transition: border 0.3s ease-in, box-shadow 0.3s ease-in;
-  -o-transition: border 0.3s ease-in, box-shadow 0.3s ease-in;
-  transition: border 0.3s ease-in, box-shadow 0.3s ease-in;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in;
+  -moz-transition: border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in;
+  -o-transition: border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in;
+  transition: border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in;
 }
 .home-page-link:hover {
-  border: 0.06em solid #5ca429;
+  background: rgba(255, 255, 255, 0.9);
+  border: 0.07em solid #5ca429;
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(92, 164, 41, 0.85);
+  -moz-box-shadow: 0px 0px 7px 3px rgba(92, 164, 41, 0.85);
+  box-shadow: 0px 0px 7px 3px rgba(92, 164, 41, 0.85);
+}
+
+.home-button {
+  color: rgba(237, 231, 92, 0.7);
+  text-decoration: none;
+  border: 0.05em solid rgba(92, 164, 41, 0.8);
+  border-radius: .25em;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(76, 135, 34, 0.6)), color-stop(100%, rgba(46, 82, 21, 0.6)));
+  background-image: -webkit-linear-gradient(rgba(76, 135, 34, 0.6), rgba(46, 82, 21, 0.6));
+  background-image: -moz-linear-gradient(rgba(76, 135, 34, 0.6), rgba(46, 82, 21, 0.6));
+  background-image: -o-linear-gradient(rgba(76, 135, 34, 0.6), rgba(46, 82, 21, 0.6));
+  background-image: linear-gradient(rgba(76, 135, 34, 0.6), rgba(46, 82, 21, 0.6));
+  -webkit-box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.27);
+  -moz-box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.27);
+  box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.27);
+}
+.home-button:hover {
+  -webkit-transition: background-image 0.3s ease-in, box-shadow 0.3s ease-in;
+  -moz-transition: background-image 0.3s ease-in, box-shadow 0.3s ease-in;
+  -o-transition: background-image 0.3s ease-in, box-shadow 0.3s ease-in;
+  transition: background-image 0.3s ease-in, box-shadow 0.3s ease-in;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(76, 135, 34, 0.8)), color-stop(100%, rgba(46, 82, 21, 0.8)));
+  background-image: -webkit-linear-gradient(rgba(76, 135, 34, 0.8), rgba(46, 82, 21, 0.8));
+  background-image: -moz-linear-gradient(rgba(76, 135, 34, 0.8), rgba(46, 82, 21, 0.8));
+  background-image: -o-linear-gradient(rgba(76, 135, 34, 0.8), rgba(46, 82, 21, 0.8));
+  background-image: linear-gradient(rgba(76, 135, 34, 0.8), rgba(46, 82, 21, 0.8));
   -webkit-box-shadow: 0px 0px 7px 3px rgba(98, 98, 98, 0.25);
   -moz-box-shadow: 0px 0px 7px 3px rgba(98, 98, 98, 0.25);
   box-shadow: 0px 0px 7px 3px rgba(98, 98, 98, 0.25);
+}
+
+.promo {
+  color: #828282;
 }
 
 .results-icon:before {
@@ -742,25 +795,6 @@ a {
 }
 .people-icon:before {
   color: #5ca429;
-}
-
-.promo {
-  color: #828282;
-}
-
-.home-button {
-  color: rgba(237, 231, 92, 0.7);
-  text-decoration: none;
-  border: 0.05em solid rgba(92, 164, 41, 0.8);
-  border-radius: .25em;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(76, 135, 34, 0.6)), color-stop(100%, rgba(46, 82, 21, 0.6)));
-  background-image: -webkit-linear-gradient(rgba(76, 135, 34, 0.6), rgba(46, 82, 21, 0.6));
-  background-image: -moz-linear-gradient(rgba(76, 135, 34, 0.6), rgba(46, 82, 21, 0.6));
-  background-image: -o-linear-gradient(rgba(76, 135, 34, 0.6), rgba(46, 82, 21, 0.6));
-  background-image: linear-gradient(rgba(76, 135, 34, 0.6), rgba(46, 82, 21, 0.6));
-  -webkit-box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.27);
-  -moz-box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.27);
-  box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.27);
 }
 
 .footer {

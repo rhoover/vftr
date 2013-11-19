@@ -31,6 +31,7 @@
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/responsive-trigger.js"></script>
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/mobile-nav-move.js"></script>
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/mobile-backbutton.js"></script>
+<script src="<?php echo $templateURL ?>/js/vftr-angular/directives/menu-item-fade.js"></script>
 
 <!-- Production Scripts, Don't Forget rev on vftr.js, grunt-usemin freaks out over php in paths
 <script src="<?php echo $templateURL ?>/libraries/angular/angular.min.js"></script>

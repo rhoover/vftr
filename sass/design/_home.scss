@@ -1,14 +1,35 @@
 .home-page-item {
     @extend %home-item-design;
+    background: rgba($white, .8);
 }
 .home-page-link {
     @extend %home-item-design;
-    @include transition(border 0.3s ease-in, box-shadow 0.3s ease-in);
+    background: rgba($white, .8);
+    @include transition(border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in);
     &:hover {
-        border: .06em solid rgba($green-mute, 1);
+        background: rgba($white, .9);
+        border: .07em solid rgba($green-mute, 1);
+        @include box-shadow(0px 0px 7px 3px rgba($green-mute, .85));
+    }
+}
+.home-button {
+    color: rgba($yellow, .7);
+    text-decoration: none;
+    border: .05em solid rgba($green-mute, .8);
+    border-radius: .25em;
+    @include background-image(linear-gradient(rgba(darken($green-mute, 7%), .6) , rgba(darken($green-mute, 20%), .6)));
+    @include box-shadow(inset 1px 1px 0px 0px rgba($white, .27));
+    &:hover {
+    @include transition(background-image 0.3s ease-in, box-shadow 0.3s ease-in);
+        @include background-image(linear-gradient(rgba(darken($green-mute, 7%), .8) , rgba(darken($green-mute, 20%), .8)));
         @include box-shadow(0px 0px 7px 3px rgba($black, .25));
     }
 }
+.promo {
+    color: $black-lite;
+}
+
+
 .results-icon{
     @include icon('before', true, 'results');
     &:before {
@@ -56,15 +77,4 @@
     &:before {
         color: $green-mute;
     }
-}
-.promo {
-    color: $black-lite;
-}
-.home-button {
-    color: rgba($yellow, .7);
-    text-decoration: none;
-    border: .05em solid rgba($green-mute, .8);
-    border-radius: .25em;
-    @include background-image(linear-gradient(rgba(darken($green-mute, 7%), .6) , rgba(darken($green-mute, 20%), .6)));
-        @include box-shadow(inset 1px 1px 0px 0px rgba($white, .27));
 }
