@@ -34,8 +34,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "globals/susy-base";
 @import "globals/typography";
 @import "globals/vertical-rhythm";
-@import "globals/mixins";
 @import "globals/colors";
+@import "globals/mixins";
 
 //Layout
 @import "layout/body";
@@ -44,6 +44,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "layout/content";
 @import "layout/section-primary";
 @import "layout/home";
+@import "layout/footer";
 
 //Design
 @import "design/html";
@@ -53,4 +54,5 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "design/content";
 @import "design/section-primary";
 @import "design/home";
+@import "design/footer";
 

@@ -19,7 +19,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         vftr: vftrConfig,
-        //watch should go first for ftp'ing up to sproduction directory... I think
+        //watch should go first for ftp'ing up to production directory... I think
 
         clean: {
             // production: ['production/'] this either creates or deletes the directory
@@ -27,24 +27,47 @@ module.exports = function (grunt) {
                 files: [{
                     dot: true,
                     src: [
-                        '<%= vftr.production %>/*',
+                        '<%= vftr.production %>/*'
                     ]
                 }]
             }
         },
 
-        //rev then usemin then copy
-        rev: {
+        concat: {
+                vftr: {
+                    src: [
+                        'js/vftr-angular/app.js',
+                        'js/vftr-angular/controllers/root.js',
+                        'js/vftr-angular/directives/responsive-trigger.js',
+                        'js/vftr-angular/directives/mobile-nav-move.js',
+                        'js/vftr-angular/directives/mobile-backbutton.js'
+                        ],
+                    dest: '<%= vftr.production %>/js/vftr.js'
+                },
+                angular: {
+                    src: [
+                        'libraries/angular-animate/angular-animate.min.js',
+                        'libraries/angular-route/angular-route.min.js',
+                        'libraries/angular-touch/angular-touch.min.js'
+                    ],
+                    dest: '<%= vftr.production %>/libraries/angular/angular-modules.min.js'
+                }
+        },
+
+        uglify: {
+            options: {
+                mangle: false
+            },
             production: {
                 files: {
-                    src: [
-                        '<%= vftr.production %>/js/vftr-angular{,*/}*.js'
-                    ]
+                    '<%= vftr.production %>/js/vftr.js': ['<%= vftr.production %>/js/vftr.js'] //destinatio:[source]
                 }
             }
         },
 
-        // Put files not handled in other tasks here, should come last
+        // useminPrepare and usemin here would be nice
+
+        // Put files not handled in other tasks here
         copy: {
             production: {
                 files: [{
@@ -53,20 +76,44 @@ module.exports = function (grunt) {
                     dest: '<%= vftr.production %>',
                     src: [
                         '*.php',
-                        '!index.php',
+                        // 'inc/*', //solved by tweaking functions.php
+                        'languages/*',
+                        'style.css',
                         'libraries/angular/angular.min.js',
                         'fonts/*',
                         'images/*'
                     ]
                 }]
             }
-        }
+        },
+
+        cssmin: {
+            minify: {
+                src: '<%= vftr.production %>/style.css',
+                dest: '<%= vftr.production %>/style.css'
+            }
+        },
+
+        rev: {
+            production: {
+                files: {
+                    src: [
+                        '<%= vftr.production %>/js/vftr{,*/}*.js'
+                    ]
+                }
+            }
+        },
 
     }); //end initConfig
 
     // grunt.registerTask('default', []);
     grunt.registerTask('build', [
         'clean:production',
-        'copy:production'
+        'concat:vftr',
+        'concat:angular',
+        'uglify',
+        'copy:production',
+        'cssmin',
+        'rev'
         ]);
 };

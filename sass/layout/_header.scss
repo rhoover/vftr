@@ -19,12 +19,30 @@
     &:before {
         padding: 0 0 0 $grid-padding/4;
     }
+    @include at-breakpoint($break-to-medium) {
+        @include span-columns(1,16);
+    }
+    @include at-breakpoint($break-to-medium-large) {
+        display: none;
+    }
+}
+.mobile-menu-button {
+    @include span-columns(2 omega, 12);
+    &:before {
+        padding: 0 0 0 $grid-padding/4;
+    }
+    @include at-breakpoint($break-to-medium) {
+        @include span-columns(1 omega,16);
+    }
     @include at-breakpoint($break-to-medium-large) {
         display: none;
     }
 }
 .title-small {
     @include span-columns(8, 12);
+    @include at-breakpoint($break-to-medium) {
+        @include span-columns(14, 16);
+    }
     @include at-breakpoint($break-to-medium-large) {
         display: none;
     }
@@ -34,14 +52,5 @@
     @include at-breakpoint($break-to-medium-large) {
         display: inline-block;
         padding: rhythm(.45, 16px) 0;
-    }
-}
-.mobile-menu-button {
-    @include span-columns(2 omega, 12);
-    &:before {
-        padding: 0 0 0 $grid-padding/4;
-    }
-    @include at-breakpoint($break-to-medium-large) {
-        display: none;
     }
 }

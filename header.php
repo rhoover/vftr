@@ -7,7 +7,7 @@
  * @package vftr
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> ng-app="vftrApp" ng-controller="RootCtrl" background ng-cloak>
+<html <?php language_attributes(); ?> ng-app="vftrApp" ng-controller="RootCtrl" data-background ng-cloak>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -58,7 +58,11 @@
     -->
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
+
+    <?php $styleURL = get_bloginfo('template_url'); ?>
+    <!-- build:css style.css -->
+    <link rel="stylesheet" href="<?php echo $styleURL ?>/style.css" type="text/css" />
+    <!-- endbuild -->
 
     <?php wp_head(); ?>
 </head>
@@ -67,8 +71,8 @@
 
     <?php do_action( 'before' ); ?>
 
-    <header class="header">
-        <span backbutton class="mobile-back-button"></span>
+     <header class="header">
+        <span data-backbutton class="mobile-back-button"></span>
         <h1 class="title-small">VFTR</h1>
         <h1 class="title-large">Valley Forge Trail Riders</h1>
         <span class="mobile-menu-button" ng-click="RootCtrl.moveMenu()"></span>
@@ -83,7 +87,7 @@
             'container' => false, // this is usually a div outside the menu ul, we don't need it
             'menu_id' => '', //added by me
             'menu_class' => 'nav', //added byt me
-            'items_wrap' => '<nav class="%2$s" nav="moveMenu">%3$s</nav>', // replacing the ul with nav, remove id too
+            'items_wrap' => '<nav class="%2$s" data-nav="moveMenu">%3$s</nav>', // replacing the ul with nav, remove id too
             'echo' => false, // don't display it just yet, instead we're storing it in the variable $cleanermenu
         ) );
         // Find the closing bracket of each li and the opening of the link, then all instances of "li"
@@ -91,6 +95,6 @@
         // Replace the former with nothing (a.k.a. delete) and the latter with "a"
         $replace = array('','a');
         echo str_replace( $find, $replace, $cleanermenu );
-    ?>
+    ?><!-- .nav -->
 
     <main class="content">
