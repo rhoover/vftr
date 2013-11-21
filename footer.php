@@ -9,13 +9,13 @@
 ?>
 
     </main><!-- .content -->
-
+<!--
     <footer class="footer">
         <h3>Valley Forge Trail Riders - Your Path To Greatness</h3>
-    </footer><!-- .footer -->
+    </footer>.footer
 
 <?php wp_footer(); ?>
-
+-->
 <?php $templateURL = get_bloginfo('template_url'); ?>
 
 <script src="<?php echo $templateURL ?>/libraries/angular/angular.js"></script>

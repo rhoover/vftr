@@ -25,6 +25,16 @@
 
 .title-large {
     @include adjust-font-size-to(35px);
+    &:before {
+        content: "";
+        display: block;
+        float: left;
+        height: 75px;
+        width: 68px;
+        margin-top: rhythm(-.25, 16px);
+        padding-right: $grid-padding*2;
+        background: url('images/VFTR-Logo-Small.png') no-repeat;
+    }
 }
 .mobile-menu-button {
     @include icon('before', true, 'menu');

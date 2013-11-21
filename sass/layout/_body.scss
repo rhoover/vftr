@@ -1,5 +1,6 @@
 body {
     font-family: $Fabrica;
+        padding-top: rhythm(3, 16px);
 }
 img {
     height: auto; /* Make sure images are scaled correctly. */

@@ -12,8 +12,6 @@
 
 get_header(); ?>
 
-    <section class="section-primary">
-
         <?php while ( have_posts() ) : the_post(); ?>
 
             <?php if(is_front_page()) { ?>
@@ -23,7 +21,5 @@ get_header(); ?>
                 <?php } ?>
 
         <?php endwhile; // end of the loop. ?>
-
-    </section><!-- .section-primary -->
 
 <?php get_footer(); ?>

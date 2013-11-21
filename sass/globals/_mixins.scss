@@ -1,7 +1,7 @@
 %content {
     @include container;
     // @include susy-grid-background;
-    min-height: 100%;
+    // min-height: 100%;
     @include at-breakpoint($break-to-medium) {
         @include container;
         // @include susy-grid-background;
@@ -132,4 +132,11 @@ $icons: (
         @include remove-nth-omega(2n); //remove nth-omega from break-to-medium
         @include nth-omega(4n);
     }
+}
+
+%inner-content-design {
+    color: $black;
+    background: rgba($white, .9);
+    border: .05em solid rgba($green-mute, .5);
+    border-radius: .25em;
 }

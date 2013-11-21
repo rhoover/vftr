@@ -30,6 +30,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "compass/utilities";
 @import "compass/layout";
 
+//Sticky Footer For Desktops - Necessary Here Per Compass Docs
+// @include sticky-footer(3em, ".content", ".faux-footer", ".footer");
+
 //Globals
 @import "globals/susy-base";
 @import "globals/typography";
@@ -42,8 +45,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "layout/header";
 @import "layout/nav";
 @import "layout/content";
-@import "layout/section-primary";
 @import "layout/home";
+@import "layout/article";
 @import "layout/footer";
 
 //Design
@@ -52,7 +55,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "design/header";
 @import "design/nav";
 @import "design/content";
-@import "design/section-primary";
 @import "design/home";
+@import "design/article";
 @import "design/footer";
 

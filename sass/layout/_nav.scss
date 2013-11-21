@@ -1,5 +1,5 @@
 .nav {
-    position: absolute;
+    position: fixed;
     top: rhythm(2.05, 16px);
     height: 100%;
     @include translate3d(-100%, 0, 0);
@@ -12,6 +12,7 @@
         z-index: 150;
     }
     @include at-breakpoint($break-to-large) {
+        // height: rhythm(3, 16px);
         @include span-columns(24, 24);
         padding-right: $grid-padding*8;}
 }

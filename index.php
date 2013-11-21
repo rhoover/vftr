@@ -14,8 +14,7 @@
 get_header(); ?>
 
     <section class="content-primary">
-<!--         <main id="main" class="site-main" role="main">
- -->
+
         <?php if ( have_posts() ) : ?>
 
             <?php /* Start the Loop */ ?>
@@ -39,7 +38,6 @@ get_header(); ?>
 
         <?php endif; ?>
 
-        <!-- </main> #main -->
     </section><!-- .content-primary -->
 
 <?php get_sidebar(); ?>

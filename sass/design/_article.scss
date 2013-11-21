@@ -1,0 +1,13 @@
+.inner-sidebar {
+    @extend %inner-content-design;
+}
+.inner-page-link {
+    color: $black;
+    @include transition(text-shadow 0.3s ease-in);
+    &:hover {
+        text-shadow: 0 0 .07em rgba($black, .5);
+    }
+}
+.article {
+    @extend %inner-content-design
+}

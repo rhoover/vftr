@@ -108,7 +108,6 @@ html {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
-  min-height: 100%;
 }
 .content:after {
   content: "";
@@ -238,8 +237,16 @@ html:after {
   }
 }
 
+.inner-sidebar, .article {
+  color: #626262;
+  background: rgba(255, 255, 255, 0.9);
+  border: 0.05em solid rgba(92, 164, 41, 0.5);
+  border-radius: .25em;
+}
+
 body {
   font-family: "Fabrica", arial, sans-serif;
+  padding-top: 4.5em;
 }
 
 img {
@@ -263,7 +270,6 @@ img {
   .header {
     height: 6em;
     position: relative;
-    margin-top: 4.5em;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -335,12 +341,12 @@ img {
 @media (min-width: 64em) {
   .title-large {
     display: inline-block;
-    padding: 0.675em 0;
+    padding: 0.675em 0 0 0;
   }
 }
 
 .nav {
-  position: absolute;
+  position: fixed;
   top: 3.075em;
   height: 100%;
   -webkit-transform: translate3d(-100%, 0, 0);
@@ -418,8 +424,7 @@ img {
 .content {
   padding-left: 8.47458%;
   padding-right: 8.47458%;
-  margin-top: 3em;
-  padding-top: 1.5em;
+  padding-top: 3em;
 }
 @media (min-width: 85em) {
   .content {
@@ -438,6 +443,43 @@ img {
 
 .promo {
   padding: 0 0.5em;
+}
+
+.inner-sidebar {
+  display: none;
+}
+@media (min-width: 64em) {
+  .inner-sidebar {
+    display: inline-block;
+    width: 24.36975%;
+    float: left;
+    margin-right: 0.84034%;
+    padding: 1.5em 1em;
+  }
+}
+
+.inner-page-link {
+  width: 100%;
+  float: left;
+  margin-right: 3.44828%;
+  padding: 0.75em 0;
+}
+.inner-page-link:first-of-type {
+  padding-top: 0;
+}
+.inner-page-link:last-of-type {
+  padding-bottom: 0;
+}
+
+.article {
+  padding: 1.5em 1em;
+}
+@media (min-width: 64em) {
+  .article {
+    width: 74.78992%;
+    float: right;
+    margin-right: 0;
+  }
 }
 
 .bg-small, .bg-medium {
@@ -502,6 +544,16 @@ a {
 .title-large {
   font-size: 2.1875em;
   line-height: 1.37143em;
+}
+.title-large:before {
+  content: "";
+  display: block;
+  float: left;
+  height: 75px;
+  width: 68px;
+  margin-top: -0.375em;
+  padding-right: 2em;
+  background: url("images/VFTR-Logo-Small.png") no-repeat;
 }
 
 .mobile-menu-button {
@@ -610,18 +662,18 @@ a {
 }
 
 .home-page-item {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .home-page-link {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   -webkit-transition: border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in;
   -moz-transition: border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in;
   -o-transition: border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in;
   transition: border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in;
 }
 .home-page-link:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   border: 0.07em solid #5ca429;
   -webkit-box-shadow: 0px 0px 7px 3px rgba(92, 164, 41, 0.85);
   -moz-box-shadow: 0px 0px 7px 3px rgba(92, 164, 41, 0.85);
@@ -795,6 +847,17 @@ a {
 }
 .people-icon:before {
   color: #5ca429;
+}
+
+.inner-page-link {
+  color: #626262;
+  -webkit-transition: text-shadow 0.3s ease-in;
+  -moz-transition: text-shadow 0.3s ease-in;
+  -o-transition: text-shadow 0.3s ease-in;
+  transition: text-shadow 0.3s ease-in;
+}
+.inner-page-link:hover {
+  text-shadow: 0 0 0.07em rgba(98, 98, 98, 0.5);
 }
 
 .footer {

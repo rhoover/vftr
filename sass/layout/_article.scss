@@ -1,0 +1,24 @@
+.inner-sidebar {
+    display: none;
+     @include at-breakpoint($break-to-medium-large) {
+        display: inline-block;
+        @include span-columns(6, 24);
+        padding: rhythm(1,16px) $grid-padding;
+     }
+}
+.inner-page-link {
+    @include span-columns(6,6);
+    padding: rhythm(.5, 16px) 0;
+    &:first-of-type {
+        padding-top: 0;
+    }
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+}
+.article {
+    padding: rhythm(1,16px) $grid-padding;
+     @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(18 omega, 24);
+     }
+ }

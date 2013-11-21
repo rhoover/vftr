@@ -10,7 +10,7 @@
 <html <?php language_attributes(); ?> ng-app="vftrApp" ng-controller="RootCtrl" data-background ng-cloak>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title><?php bloginfo('name'); ?><?php wp_title( '|', true, 'left' ); ?></title>
 
     <!-- generic -->
     <meta name="description" content="Valley Forge Trail Riders - Home of the Moonshine Enduro">
