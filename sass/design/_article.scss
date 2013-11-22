@@ -9,5 +9,10 @@
     }
 }
 .article {
-    @extend %inner-content-design
+    @extend %inner-content-design;
+    h2 {
+        @include adjust-font-size-to(24px);
+        color: darken($green-mute, 10%);
+        font-weight: bold;
+    }
 }

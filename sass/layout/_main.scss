@@ -1,5 +1,5 @@
-.content {
-    @extend %content;
+.main {
+    @extend %main;
     @include pad(1, 1);
     padding-top: rhythm(2, 16px);
     @include at-breakpoint($break-to-large) {

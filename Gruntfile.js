@@ -42,7 +42,7 @@ module.exports = function (grunt) {
                         'js/vftr-angular/directives/mobile-nav-move.js',
                         'js/vftr-angular/directives/mobile-backbutton.js'
                         ],
-                    dest: '<%= vftr.production %>/js/vftr.js'
+                    dest: '<%= vftr.production %>/js/vftr-angular/vftr.js'
                 },
                 angular: {
                     src: [
@@ -81,7 +81,8 @@ module.exports = function (grunt) {
                         'style.css',
                         'libraries/angular/angular.min.js',
                         'fonts/*',
-                        'images/*'
+                        'images/*',
+                        'data/*'
                     ]
                 }]
             }

@@ -79,14 +79,14 @@
     </header><!-- .header -->
 
     <?php
-        //http://zoerooney.com/blog/tutorials/removing-list-items-wordpress-menus/
+        //courtesy of:  http://zoerooney.com/blog/tutorials/removing-list-items-wordpress-menus/
         //combine with addition to functions.php
         // first let's get our nav menu using the regular wp_nav_menu() function with special parameters
         $cleanermenu = wp_nav_menu( array(
             'theme_location' => 'primary', // we've registered a theme location in functions.php
             'container' => false, // this is usually a div outside the menu ul, we don't need it
             'menu_id' => '', //added by me
-            'menu_class' => 'nav', //added byt me
+            'menu_class' => 'nav', //added by me
             'items_wrap' => '<nav class="%2$s" data-nav="moveMenu">%3$s</nav>', // replacing the ul with nav, remove id too
             'echo' => false, // don't display it just yet, instead we're storing it in the variable $cleanermenu
         ) );
@@ -97,4 +97,4 @@
         echo str_replace( $find, $replace, $cleanermenu );
     ?><!-- .nav -->
 
-    <main class="content">
+    <main class="main">

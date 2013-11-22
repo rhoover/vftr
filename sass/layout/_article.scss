@@ -10,7 +10,7 @@
     @include span-columns(6,6);
     padding: rhythm(.5, 16px) 0;
     &:first-of-type {
-        padding-top: 0;
+        padding-top: rhythm(.35, 16px);
     }
     &:last-of-type {
         padding-bottom: 0;

@@ -1,0 +1,40 @@
+//Courtesy of and inspired by: http://codepen.io/geoffyuen/pen/FCBEg
+
+.results2013 {
+    width: 100%;
+    margin: rhythm(1, 16px) 0;
+    th {
+        display: none;
+    }
+    td {
+        display: block;
+        &:first-child {
+            padding-top: rhythm(.5, 16px);
+        }
+        &:last-child {
+            padding-bottom: rhythm(.5, 16px)
+        }
+        &:before {
+            content: attr(data-head)":";
+            display: inline-block;
+            padding-right: $grid-padding;
+            @include at-breakpoint($break-to-medium-large) {
+                display: none;
+            }
+        }
+    }
+
+    th, td {
+        text-align: left;
+        @include at-breakpoint($break-to-medium-large) {
+            display: table-cell;
+            padding: rhythm(.25, 16px) $grid-padding/2;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+            padding-right: 0;
+            }
+        }
+    }
+}

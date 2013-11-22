@@ -19,7 +19,8 @@
 
 </aside>
 
-<article id="post-<?php the_ID(); ?>" class="article"> <!-- <?php post_class(); ?> -->
+<!-- <article id="post-<?php the_ID(); ?>" class="article"> -->
+<article class="article">
 
     <?php the_content(); ?>
 <!--
@@ -31,4 +32,4 @@
     ?>
 -->
 <?php edit_post_link( __( 'Edit', 'vftr' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
-</article><!-- #post-## -->
+</article><!-- .article -->
