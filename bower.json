@@ -7,14 +7,15 @@
   "description": "Home of the Moonshine Enduro",
   "license": "MIT",
   "dependencies": {
-    "angular": "1.2.1",
-    "angular-touch": "1.2.1",
-    "angular-route": "1.2.1",
-    "angular-animate": "1.2.1",
+    "angular": "1.2.2",
+    "angular-touch": "1.2.2",
+    "angular-route": "1.2.2",
+    "angular-animate": "1.2.2",
     "json3": "~3.2.5",
     "es5-shim": "~2.1.0"
   },
   "resolutions": {
-    "angular": "1.2.1"
+    "angular": "1.2.2",
+    "angular-touch": "1.2.2"
   }
 }

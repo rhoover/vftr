@@ -1,8 +1,59 @@
-//Courtesy of and inspired by: http://codepen.io/geoffyuen/pen/FCBEg
-
-.results2013 {
-    tr {
-        border-top: .05em solid $green-mute;
-        border-bottom: .05em solid $green-mute;
+.results-search-input {
+    @include adjust-font-size-to(18px);
+    background: transparent;
+    border-top: transparent;
+    border-style: solid;
+    border-color: rgba($green-mute, .5);
+    border-width: 0 0 .1em 0;
+    &:focus {
+        @include input-placeholder-focus(transparent);
+        outline: 0;
+        background: rgba($green-mute, .06);
+        padding-left: $grid-padding;
     }
+}
+
+//Courtesy of and inspired by: http://codepen.io/geoffyuen/pen/FCBEg
+.results2013 {
+    .header-row {
+        background: rgba($green-mute, .1);
+        @include at-breakpoint($break-to-medium-large) {
+            border-top: .1em solid $green-mute;
+        }
+    }
+    .results-row {
+        // border-bottom: .05em solid $green-mute;
+        @include at-breakpoint($break-to-medium-large) {
+            border-top: .1em solid $green-mute;
+        }
+        td {
+            @include adjust-font-size-to(14px);
+            &:before {
+                content: attr(data-head)":";
+            }
+            &:first-of-type {
+                background: rgba($green-mute, .25);
+                border-radius: .25em;
+                border: .1em solid $green-mute;
+                @include at-breakpoint($break-to-medium-large) {
+                    background: transparent;
+                    border: none;
+                }
+            }
+            @include at-breakpoint($break-to-medium-large) {
+                text-align: center;
+                &:first-of-type {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    th {
+        text-align: center;
+        &:first-of-type {
+            text-align: left;
+        }
+    }
+
 }

@@ -1,31 +1,63 @@
-//Courtesy of and inspired by: http://codepen.io/geoffyuen/pen/FCBEg
+.results-search {
+    height: auto;
+    margin-top: rhythm(1, 16px);
+}
+.results-search-input {
+    width: 100%;
+    padding: rhythm(.25, 16px) 0;
+    &:first-of-type {
+        margin-bottom: rhythm(1, 16px);
+    }
+    @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(6, 18);
+        margin-bottom: rhythm(1, 16px);
+        // &:first-of-type {
+        //     margin-bottom: 0;
+        // }
+        &:last-of-type {
+            @include span-columns(6 omega, 18);
+        }
+    }
+}
 
+//Courtesy of and inspired by: http://codepen.io/geoffyuen/pen/FCBEg
 .results2013 {
     width: 100%;
     margin: rhythm(1, 16px) 0;
-    th {
-        display: none;
-    }
+
     td {
         display: block;
         &:first-child {
-            padding-top: rhythm(.5, 16px);
+            padding-top: rhythm(.25, 16px);
+            padding-bottom: rhythm(.25, 16px);
         }
         &:last-child {
             padding-bottom: rhythm(.5, 16px)
         }
         &:before {
-            content: attr(data-head)":";
+            // content: attr(data-head)":";
             display: inline-block;
             padding-right: $grid-padding;
+            padding-left: $grid-padding;
             @include at-breakpoint($break-to-medium-large) {
                 display: none;
             }
         }
+        @include at-breakpoint($break-to-medium-large) {
+            display: table-cell;
+            padding: rhythm(.25, 16px) $grid-padding/2;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+            padding-right: 0;
+            }
+
+        }
     }
 
-    th, td {
-        text-align: left;
+    th {
+        display: none;
         @include at-breakpoint($break-to-medium-large) {
             display: table-cell;
             padding: rhythm(.25, 16px) $grid-padding/2;
@@ -37,4 +69,5 @@
             }
         }
     }
+
 }

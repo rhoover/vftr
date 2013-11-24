@@ -16,7 +16,7 @@
     <p class="promo">Find Events And Meetings</p>
 </a>
 <a href="#" class="home-page-link"><h2 class="about-icon home-sub-header">Club Calendar</h2>
-    <p class="promo">Event Dates, Work Days, Club Rides, etc</p>
+    <p class="promo">Meetings, Work Days, Rides, etc</p>
 </a>
 <a href="#" class="home-page-link"><h2 class="people-icon home-sub-header">About VFTR</h2>
     <p class="promo">Our History, Mission And Fun</p>
