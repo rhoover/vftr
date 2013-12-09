@@ -25,8 +25,11 @@
         @include span-columns(2 omega, 20);
         padding: rhythm(.25, 16px) 0;
     }
+    @include at-breakpoint($break-to-large) {
+        @include span-columns(2 omega, 24);
+    }
 }
-//AngularJS Mobile Behavior for Fly-in Menu
+//AngularJS Mobile Behavior/Animation for Fly-in Menu
 .navmove-add, .navmove-remove {
     @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
 }

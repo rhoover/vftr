@@ -1,8 +1,9 @@
 body {
     font-family: $Fabrica;
-        padding-top: rhythm(3, 16px);
+    padding-top: rhythm(3, 16px);
+    // height: 100%;
 }
-img {
-    height: auto; /* Make sure images are scaled correctly. */
-    max-width: 100%; /* Adhere to container width. */
-}
+// img {
+//     height: auto; /* Make sure images are scaled correctly. */
+//     max-width: 100%; /* Adhere to container width. */
+// }

@@ -15,7 +15,7 @@
 <a href="#" class="home-page-link"><h2 class="maps-icon home-sub-header">Locations/Maps</h2>
     <p class="promo">Find Events And Meetings</p>
 </a>
-<a href="#" class="home-page-link"><h2 class="about-icon home-sub-header">Club Calendar</h2>
+<a href="http://vftr/?page_id=56" class="home-page-link"><h2 class="about-icon home-sub-header">Club Calendar</h2>
     <p class="promo">Meetings, Work Days, Rides, etc</p>
 </a>
 <a href="#" class="home-page-link"><h2 class="people-icon home-sub-header">About VFTR</h2>

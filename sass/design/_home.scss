@@ -1,28 +1,20 @@
-.home-page-item {
-    @extend %home-item-design;
-    background: rgba($white, .9);
-}
 .home-page-link {
     @extend %home-item-design;
-    background: rgba($white, .9);
+    background: rgba($white, .4);
     @include transition(border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in);
-    &:hover {
+    &:active {
         background: rgba($white, 1);
         border: .07em solid rgba($green-mute, 1);
         @include box-shadow(0px 0px 7px 3px rgba($green-mute, .85));
     }
-}
-.home-button {
-    color: rgba($yellow, .7);
-    text-decoration: none;
-    border: .05em solid rgba($green-mute, .8);
-    border-radius: .25em;
-    @include background-image(linear-gradient(rgba(darken($green-mute, 7%), .6) , rgba(darken($green-mute, 20%), .6)));
-    @include box-shadow(inset 1px 1px 0px 0px rgba($white, .27));
-    &:hover {
-    @include transition(background-image 0.3s ease-in, box-shadow 0.3s ease-in);
-        @include background-image(linear-gradient(rgba(darken($green-mute, 7%), .8) , rgba(darken($green-mute, 20%), .8)));
-        @include box-shadow(0px 0px 7px 3px rgba($black, .25));
+    -webkit-tap-highlight-color:  rgba($white, 1);
+    @include at-breakpoint($break-to-medium-large) {
+        background: rgba($white, .9);
+        &:hover {
+            background: rgba($white, 1);
+            border: .07em solid rgba($green-mute, 1);
+            @include box-shadow(0px 0px 7px 3px rgba($green-mute, .85));
+        }
     }
 }
 .promo {

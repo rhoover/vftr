@@ -1,8 +1,8 @@
 .main {
     @extend %main;
-    @include pad(1, 1);
-    padding-top: rhythm(2, 16px);
+    // @include pad(1, 1);
     @include at-breakpoint($break-to-large) {
         @include pad(4, 4);
+    padding-top: rhythm(1, 16px);
     }
 }

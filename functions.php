@@ -93,6 +93,9 @@ remove_action('wp_head', 'wlwmanifest_link'); // Might be necessary if you or ot
 remove_action('wp_head', 'start_post_rel_link', 10, 0); // Start link
 remove_action('wp_head', 'parent_post_rel_link', 10, 0); // Prev link
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0); // Display relational links for the posts adjacent to the current post.
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'wp_shortlink_wp_head');
 remove_filter( 'the_content', 'capital_P_dangit' ); // Get outta my Wordpress codez dangit!
 remove_filter( 'the_title', 'capital_P_dangit' );
 remove_filter( 'comment_text', 'capital_P_dangit' );

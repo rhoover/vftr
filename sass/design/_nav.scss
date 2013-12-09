@@ -11,24 +11,35 @@
     color: $white;
     border-bottom: .1em solid rgba(darken($green-dark, 15%), .5);
     @include box-shadow(inset 0px 1px 0px 0px rgba($white, .15));
+    &:active {
+        background-color: rgba(darken($green-mute, 20%), .65);
+    }
     @include at-breakpoint($break-to-medium-large) {
         border-bottom: none;
         box-shadow: none;
         @include text-shadow(0px 0px 2px rgba(0, 0, 0, .5));
+        &:active {
+            background-color: rgba($green-mute, 0.0);
+        }
     }
 }
 .menu-item.fade {
-    @include transition(color 0.3s ease-in, text-shadow 0.3s ease-in);
-    color: transparent;
-    @include text-shadow(0px 0px 3px rgba(0,0,0, .8));
+    @include at-breakpoint($break-to-medium-large) {
+        @include transition(color 0.3s ease-in, text-shadow 0.3s ease-in);
+        color: transparent;
+        @include text-shadow(0px 0px 3px rgba(0,0,0, .8));
+    }
 }
 .menu-item.hover {
-    color: $yellow;
+    @include at-breakpoint($break-to-medium-large) {
+        color: $yellow;
+    }
 }
 
 .home-icon {
     @include icon('before', true, 'home');
     &:before {
+        -webkit-tap-highlight-color: desaturate($yellow, 35%);
         @include at-breakpoint($break-to-medium-large) {
             display: none;
         }

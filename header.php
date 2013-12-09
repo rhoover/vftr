@@ -9,6 +9,12 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> ng-app="vftrApp" ng-controller="RootCtrl" data-background ng-cloak>
 <head>
+
+    <?php $styleURL = get_bloginfo('template_url'); ?>
+    <!-- build:css style.css -->
+    <link href="<?php echo $styleURL ?>/style.css" rel="stylesheet" />
+    <!-- endbuild -->
+
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <title><?php bloginfo('name'); ?><?php wp_title( '|', true, 'left' ); ?></title>
 
@@ -19,7 +25,7 @@
 
     <!-- Mobile Stuff -->
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
 
     <!-- apple stuff -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -59,11 +65,6 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-    <?php $styleURL = get_bloginfo('template_url'); ?>
-    <!-- build:css style.css -->
-    <link rel="stylesheet" href="<?php echo $styleURL ?>/style.css" type="text/css" />
-    <!-- endbuild -->
-
     <?php wp_head(); ?>
 </head>
 
@@ -71,7 +72,7 @@
 
     <?php do_action( 'before' ); ?>
 
-     <header class="header">
+     <header  class="header"><!-- scroll-position="scroll"  ng-class="{header.fixed: scroll > 72, header: scroll <= 72}"-->
         <span data-backbutton class="mobile-back-button"></span>
         <h1 class="title-small">VFTR</h1>
         <h1 class="title-large">Valley Forge Trail Riders</h1>
@@ -84,15 +85,15 @@
         // first let's get our nav menu using the regular wp_nav_menu() function with special parameters
         $cleanermenu = wp_nav_menu( array(
             'theme_location' => 'primary', // we've registered a theme location in functions.php
-            'container' => false, // this is usually a div outside the menu ul, we don't need it
+            'container' => false, // this is usually a div outside the menu ul, we don't need it hence false
             'menu_id' => '', //added by me
             'menu_class' => 'nav', //added by me
             'items_wrap' => '<nav class="%2$s" data-nav="moveMenu">%3$s</nav>', // replacing the ul with nav, remove id too
             'echo' => false, // don't display it just yet, instead we're storing it in the variable $cleanermenu
         ) );
-        // Find the closing bracket of each li and the opening of the link, then all instances of "li"
+        // Find the closing bracket of each li and the opening of the link (><a), then all instances of "li"
         $find = array('><a','li');
-        // Replace the former with nothing (a.k.a. delete) and the latter with "a"
+        // Replace the ><a with nothing (a.k.a. delete) and the li with "a"
         $replace = array('','a');
         echo str_replace( $find, $replace, $cleanermenu );
     ?><!-- .nav -->

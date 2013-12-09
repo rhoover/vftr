@@ -2,8 +2,10 @@ html {
     @extend %responsive-trigger;
 }
 .bg-small {
-    background: url('images/bg-mobile.jpg') no-repeat fixed center top;
-    background-size: 100% 100%;
+    // background: url('images/bg-mobile.jpg') no-repeat left top fixed;
+    background: url('images/light_grey.png') repeat left top fixed;
+    // background-size: 100% 100%;
+    background-size: cover;
 }
 .bg-medium {
     @extend .bg-small;

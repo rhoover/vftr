@@ -15,6 +15,7 @@
     &:active {
         background-color: rgba(darken($green-mute, 20%), .65);
         border-radius: .25em;
+        -webkit-tap-highlight-color: desaturate($yellow, 35%);
     }
 }
 .title-small {
@@ -43,5 +44,6 @@
     &:active {
         background-color: rgba(darken($green-mute, 20%), .65);
         border-radius: .25em;
+        -webkit-tap-highlight-color: desaturate($yellow, 35%);
     }
 }
