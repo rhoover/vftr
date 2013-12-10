@@ -7,5 +7,4 @@ angular.module("vftrApp")
             $scope.moveMenu = !$scope.moveMenu;
         };
         return $scope.RootCtrl = this;
-        // $scope.scroll = 0;
     }]);

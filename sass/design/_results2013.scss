@@ -1,59 +1,174 @@
+.results-search {
+    border-radius: .25em;
+    border: solid .1em rgba($green-mute, .5);
+    @include at-breakpoint($break-to-medium-large) {
+        border: none;
+    }
+}
 .results-search-input {
     @include adjust-font-size-to(18px);
     background: transparent;
     border-top: transparent;
     border-style: solid;
     border-color: rgba($green-mute, .5);
-    border-width: 0 0 .1em 0;
+    border-width: .1em;
+    border-radius: .25em;
     &:focus {
         @include input-placeholder-focus(transparent);
         outline: 0;
-        background: rgba($green-mute, .06);
+        background: rgba($green-mute, .08);
         padding-left: $grid-padding;
     }
 }
+.results-search-select {
+    @include adjust-font-size-to(18px);
+    color: $black-lite;
+    background-color: rgba($green-mute, .1);
+    border: solid .1em rgba($green-mute, .5);
+    border-radius: .25em;
+}
 
 //Courtesy of and inspired by: http://codepen.io/geoffyuen/pen/FCBEg
-.results2013 {
-    .header-row {
-        background: rgba($green-mute, .1);
-        @include at-breakpoint($break-to-medium-large) {
-            border-top: .1em solid $green-mute;
-        }
-    }
-    .results-row {
-        // border-bottom: .05em solid $green-mute;
-        @include at-breakpoint($break-to-medium-large) {
-            border-top: .1em solid $green-mute;
-        }
-        td {
-            @include adjust-font-size-to(14px);
-            &:before {
-                content: attr(data-head)":";
-            }
-            &:first-of-type {
-                background: rgba($green-mute, .25);
-                border-radius: .25em;
-                border: .1em solid $green-mute;
-                @include at-breakpoint($break-to-medium-large) {
-                    background: transparent;
-                    border: none;
-                }
-            }
-            @include at-breakpoint($break-to-medium-large) {
-                text-align: center;
-                &:first-of-type {
-                    text-align: left;
-                }
-            }
-        }
-    }
+// .results2013 {
+//     .primary-header-row {
+//         background: rgba($green-mute, .1);
+//         @include at-breakpoint($break-to-medium-large) {
+//             border-top: .1em solid $green-mute;
+//         }
+//     }
+//     .results-row {
+//         @include at-breakpoint($break-to-medium-large) {
+//             border-top: .1em solid $green-mute;
+//         }
 
-    th {
+//     }
+//     .results-cell {
+//         @include adjust-font-size-to(14px);
+//         &:before {
+//             content: attr(data-head)":";
+//         }
+//         &:first-of-type {
+//             background: rgba($green-mute, .25);
+//             border-radius: .25em;
+//             border: .1em solid $green-mute;
+//             @include icon('after', true, 'arrowdown');
+//             &:after {
+//                 color: $green-mute;
+//                 float: right;
+//                 border: solid .1em $green-mute;
+//                 padding-left: $grid-padding/2;
+//                 border-radius: .25em;
+//                 margin-right: $grid-padding/2;
+//                 @include at-breakpoint($break-to-medium-large) {
+//                     border: none;
+//                 }
+//             }
+//             @include at-breakpoint($break-to-medium-large) {
+//                 background: transparent;
+//                 border: none;
+//             }
+//         }
+//         @include at-breakpoint($break-to-medium-large) {
+//             text-align: center;
+//             &:first-of-type {
+//                 text-align: left;
+//             }
+//         }
+//     }
+
+//     .primary-header-cell {
+//         text-align: center;
+//         &:first-of-type {
+//             text-align: left;
+//         }
+//     }
+
+// }
+
+.summary-header {
+    @include at-breakpoint($break-to-medium-large) {
+        background: rgba($green-mute, .2);
+        border-top: solid .1em $green-mute;
+        border-bottom: solid .1em $green-mute;
+        @include adjust-font-size-to(14px);
+    }
+}
+.summary-header-item {
+    @include at-breakpoint($break-to-medium-large) {
         text-align: center;
         &:first-of-type {
             text-align: left;
         }
     }
+}
+.results-row {
+    @include at-breakpoint($break-to-medium-large) {
+        border-bottom: solid .1em $green-mute;
+    }
+}
+.results-row-item {
+    &:before {
+        content: attr(data-head)":  ";
+        @include at-breakpoint($break-to-medium-large) {
+            content: "";
+        }
+    }
+    &:first-of-type {
+        text-align: left;
+        @include icon('after', true, 'arrowdown');
+        cursor: pointer;
+        background: rgba($green-mute, .3);
+        padding: rhythm(.25, 16px) 0;
+        border-radius: .25em;
+        border: solid .1em $green-mute;
+        @include at-breakpoint($break-to-medium-large) {
+            background: transparent;
+            border-radius: 0;
+            border: none;
+        }
+        &:after {
+            color: $green-dark;
+            float: right;
+            padding-left: $grid-padding/2;
+            margin-right: $grid-padding/2;
+            @include transform(rotate(0deg));
+            @include transition(all .75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+        }
+    }
+    @include at-breakpoint($break-to-medium-large) {
+        text-align: center;
+        &:first-of-type {
+            text-align: left;
 
+        }
+    }
+}
+.results-row-item.hidden {
+    &:after {
+        color: red;
+            @include transform(rotate(180deg));
+    }
+}
+.checkpoints-row {
+    border-bottom: solid .1em $green-mute;
+    border-top: solid .1em $green-mute;
+    @include at-breakpoint($break-to-medium-large) {
+        text-align: center;
+    }
+}
+.checkpoints-row.hidden {
+    border-bottom: none;
+    border-top: none;
+    @include at-breakpoint($break-to-medium-large) {
+        text-align: center;
+    }
+}
+.checkpoints-row-item {
+    &:nth-of-type(odd) {
+        color: $black;
+        font-weight: bold;
+    }
+    @include at-breakpoint($break-to-medium-large) {
+        @include adjust-font-size-to(12px);
+    }
 }

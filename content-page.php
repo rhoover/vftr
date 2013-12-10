@@ -19,8 +19,15 @@
 
 </aside>
 
-<!-- <article id="post-<?php the_ID(); ?>" class="article"> -->
-<article class="article">
+<article
+    <?php
+        $mycustom_value = get_post_custom_values('special');
+        foreach ( $mycustom_value as $value ) {
+          post_class($value);
+        }
+    ?>
+    data-ng-cloak
+>
 
     <?php the_content(); ?>
 <!--

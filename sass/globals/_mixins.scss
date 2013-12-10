@@ -108,7 +108,7 @@ $icons: (
     color: $black;
     @include adjust-font-size-to(25px);
     text-align: center;
-    border: .06em solid rgba($green-mute, .5);
+    border: .1em solid rgba($green-mute, .5);
     border-radius: .25em;
 }
 
@@ -116,7 +116,8 @@ $icons: (
     @include span-columns(12,12);
     margin-right: 0;
     margin-bottom: rhythm(1, 16px);
-    padding: rhythm(.25, 16px) 0;
+    // padding: rhythm(.25, 16px) 0;
+    padding: $grid-padding/2;
     min-height: rhythm(5, 16px);
     @include at-breakpoint($break-to-medium) {
         @include span-columns(8, 16);
@@ -135,7 +136,7 @@ $icons: (
 }
 
 %inner-content-design {
-    color: $black;
+    color: $black-lite;
     background: rgba($white, .9);
     border: .1em solid rgba($green-mute, .5);
     border-radius: .25em;

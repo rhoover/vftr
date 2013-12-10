@@ -7,7 +7,7 @@
  * @package vftr
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> ng-app="vftrApp" ng-controller="RootCtrl" data-background ng-cloak>
+<html <?php language_attributes(); ?> data-ng-app="vftrApp" data-ng-controller="RootCtrl" data-background data-ng-cloak>
 <head>
 
     <?php $styleURL = get_bloginfo('template_url'); ?>
@@ -76,7 +76,7 @@
         <span data-backbutton class="mobile-back-button"></span>
         <h1 class="title-small">VFTR</h1>
         <h1 class="title-large">Valley Forge Trail Riders</h1>
-        <span class="mobile-menu-button" ng-click="RootCtrl.moveMenu()"></span>
+        <span class="mobile-menu-button" data-ng-click="RootCtrl.moveMenu()"></span>
     </header><!-- .header -->
 
     <?php

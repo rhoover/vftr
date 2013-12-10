@@ -16,7 +16,7 @@
         padding-bottom: 0;
     }
 }
-.article {
+article {
     padding: rhythm(1,16px) $grid-padding;
      @include at-breakpoint($break-to-medium-large) {
         @include span-columns(18 omega, 24);

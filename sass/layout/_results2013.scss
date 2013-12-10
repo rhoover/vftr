@@ -1,73 +1,159 @@
 .results-search {
     height: auto;
     margin-top: rhythm(1, 16px);
+    padding: rhythm(.5, 16px);
+    @include at-breakpoint($break-to-medium-large) {
+        padding: 0;
+    }
 }
 .results-search-input {
     width: 100%;
-    padding: rhythm(.25, 16px) 0;
-    &:first-of-type {
-        margin-bottom: rhythm(1, 16px);
+    padding: rhythm(.25, 16px);
+    margin: rhythm(.5, 16px) 0 0 0;
+    @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(6 omega, 18);
+        margin: 0 0 rhythm(1, 16px) 0;
     }
+}
+.results-search-select {
+    width: 100%;
+    padding: rhythm(.25, 16px);
     @include at-breakpoint($break-to-medium-large) {
         @include span-columns(6, 18);
         margin-bottom: rhythm(1, 16px);
-        // &:first-of-type {
-        //     margin-bottom: 0;
-        // }
-        &:last-of-type {
-            @include span-columns(6 omega, 18);
-        }
     }
 }
 
 //Courtesy of and inspired by: http://codepen.io/geoffyuen/pen/FCBEg
-.results2013 {
+// .results2013 {
+//     width: 100%;
+//     margin: rhythm(1, 16px) 0;
+
+//     .results-cell {
+//         display: block;
+//         &:first-child {
+//             padding-top: rhythm(.25, 16px);
+//             padding-bottom: rhythm(.25, 16px);
+//         }
+//         &:last-child {
+//             padding-bottom: rhythm(.5, 16px)
+//         }
+//         &:before {
+//             display: inline-block;
+//             padding-right: $grid-padding;
+//             padding-left: $grid-padding;
+//             @include at-breakpoint($break-to-medium-large) {
+//                 display: none;
+//             }
+//         }
+//         @include at-breakpoint($break-to-medium-large) {
+//             display: table-cell;
+//             padding: rhythm(.25, 16px) $grid-padding/2;
+//             &:first-child {
+//                 padding-left: 0;
+//             }
+//             &:last-child {
+//             padding-right: 0;
+//             }
+
+//         }
+//     }
+
+//     .primary-header-cell {
+//         display: none;
+//         @include at-breakpoint($break-to-medium-large) {
+//             display: table-cell;
+//             padding: rhythm(.25, 16px) $grid-padding/2;
+//             &:first-child {
+//                 padding-left: 0;
+//             }
+//             &:last-child {
+//             padding-right: 0;
+//             }
+//         }
+//     }
+
+// }
+
+.results-2013 {
     width: 100%;
-    margin: rhythm(1, 16px) 0;
-
-    td {
+    margin-top: rhythm(1, 16px);
+    @include at-breakpoint($break-to-medium-large) {
+        margin-top: rhythm(4, 16px);
+    }
+}
+.summary-header {
+    display: none;
+    @include at-breakpoint($break-to-medium-large) {
         display: block;
-        &:first-child {
-            padding-top: rhythm(.25, 16px);
-            padding-bottom: rhythm(.25, 16px);
+        width: 100%;
+        height: rhythm(2.5, 16px);
+        padding: rhythm(.7, 16px) $grid-padding;
+    }
+}
+.summary-header-item {
+    @include at-breakpoint($break-to-medium-large) {
+        display: inline-block;
+        @include span-columns(2, 18);
+        &:first-of-type {
+            @include span-columns(6, 18);
         }
-        &:last-child {
-            padding-bottom: rhythm(.5, 16px)
-        }
-        &:before {
-            // content: attr(data-head)":";
-            display: inline-block;
-            padding-right: $grid-padding;
-            padding-left: $grid-padding;
-            @include at-breakpoint($break-to-medium-large) {
-                display: none;
-            }
-        }
-        @include at-breakpoint($break-to-medium-large) {
-            display: table-cell;
-            padding: rhythm(.25, 16px) $grid-padding/2;
-            &:first-child {
-                padding-left: 0;
-            }
-            &:last-child {
-            padding-right: 0;
-            }
-
+        &:last-of-type {
+            margin-right: 0;
         }
     }
-
-    th {
-        display: none;
-        @include at-breakpoint($break-to-medium-large) {
-            display: table-cell;
-            padding: rhythm(.25, 16px) $grid-padding/2;
-            &:first-child {
-                padding-left: 0;
-            }
-            &:last-child {
-            padding-right: 0;
-            }
+}
+.results-row {
+    height: rhythm(7.75, 16px);
+    overflow: hidden;
+    @include transition(height .75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+    @include at-breakpoint($break-to-medium-large) {
+        height: rhythm(2, 16px);
+        padding: rhythm(.5, 16px) $grid-padding;
+        display: block;
+    }
+}
+.results-row.hidden {
+    height: rhythm(23, 16px);
+    @include at-breakpoint($break-to-medium-large) {
+        height: rhythm(4, 16px);
+    }
+}
+.results-row-item {
+    display: block;
+    padding: 0 0 0 $grid-padding/2;
+    @include at-breakpoint($break-to-medium-large) {
+        display: inline-block;
+        @include span-columns(2, 18);
+        &:first-of-type {
+            @include span-columns(6, 18);
+            padding: 0;
+        }
+        &:last-of-type {
+            margin-right: 0;
         }
     }
+}
 
+.checkpoints-row {
+    @include at-breakpoint($break-to-medium-large) {
+        display: block;
+        margin-top: rhythm(1.5, 16px);
+        overflow: hidden;
+        @include transition(height .75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+    }
+}
+.checkpoints-row.hidden {
+    @include at-breakpoint($break-to-medium-large) {
+        height: 0;
+    }
+}
+.checkpoints-row-item {
+    display: block;
+    padding-left: $grid-padding/2;
+    @include at-breakpoint($break-to-medium-large) {
+        display: inline-block;
+        padding-right: $grid-padding/2;
+        padding-left: 0;
+    }
 }

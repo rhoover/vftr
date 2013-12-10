@@ -1,0 +1,11 @@
+.meetingmap {
+    @include span-columns(12, 12);
+    height: rhythm(13, 16px);
+     @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(24, 24);
+        height: rhythm(15, 16px);
+     }
+}
+.enduromap {
+    @extend .meetingmap;
+}

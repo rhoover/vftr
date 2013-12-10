@@ -5,3 +5,9 @@
 .event-description {
     margin-bottom: rhythm(1, 16px);
 }
+.vevent {
+    margin-bottom: rhythm(1, 16px);
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}

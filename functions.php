@@ -97,11 +97,18 @@ remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'index_rel_link');
 remove_action('wp_head', 'wp_shortlink_wp_head');
 remove_filter( 'the_content', 'capital_P_dangit' ); // Get outta my Wordpress codez dangit!
+// remove_filter('the_content', 'wpautop');
 remove_filter( 'the_title', 'capital_P_dangit' );
 remove_filter( 'comment_text', 'capital_P_dangit' );
 
 function rhwp_remove_version() {return '';}
 add_filter('the_generator', 'rhwp_remove_version');
+
+function rah_post_names($classes) {
+    $classes = array_diff($classes, array("page", "type-page", "status-publish", "hentry"));
+    return $classes;
+}
+add_filter('post_class', 'rah_post_names');
 
 /**
  * Implement the Custom Header feature.
