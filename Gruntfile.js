@@ -39,11 +39,13 @@ module.exports = function (grunt) {
                         'js/vftr-angular/app.js',
                         'js/vftr-angular/services/moonshine-2013-results.js',
                         'js/vftr-angular/controllers/root.js',
-                        'js/vftr-angular/controllers/moonshine-2013-results.js',
                         'js/vftr-angular/directives/responsive-trigger.js',
-                        'js/vftr-angular/directives/menu-item-fade.js',
                         'js/vftr-angular/directives/mobile-nav-move.js',
-                        'js/vftr-angular/directives/mobile-backbutton.js'
+                        'js/vftr-angular/directives/mobile-backbutton.js',
+                        'js/vftr-angular/directives/menu-item-fade.js',
+                        'js/vftr-angular/directives/moonshine2013.js',
+                        'js/vftr-angular/directives/meetingmap.js',
+                        'js/vftr-angular/directives/enduromap.js'
                         ],
                     dest: '<%= vftr.production %>/js/vftr-angular/vftr.js'
                 },
@@ -80,7 +82,7 @@ module.exports = function (grunt) {
                     src: [
                         '*.php',
                         // 'inc/*', //solved by tweaking functions.php
-                        'languages/*',
+                        // 'languages/*', //solved by tweaking functions.php
                         'style.css',
                         'libraries/angular/angular.min.js',
                         'fonts/*',

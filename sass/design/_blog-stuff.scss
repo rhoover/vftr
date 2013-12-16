@@ -1,0 +1,49 @@
+//blog list
+.post-title {
+    @extend %info-highlight;
+    a {
+        color: $green-dark;
+    }
+}
+.post-meta{
+    @include adjust-font-size-to(12px);
+    color: rgba($black-lite, .5);;
+}
+
+//blog-post
+.post-date {
+    @extend .post-meta;
+}
+
+//blog-comments
+.comments-title {
+    color: $black-lite;
+    @include adjust-font-size-to(16px);
+    font-weight: normal;
+    border-top: .1em solid $green-dark;
+    border-bottom: .1em solid $green-dark;
+}
+.comment {
+    border-bottom: .1em solid $green-dark;
+}
+.reply {
+    text-align: right;
+    @include adjust-font-size-to(14px);
+}
+
+.comment-reply-title {
+    @extend %info-highlight;
+}
+.comment-notes {
+    @include adjust-font-size-to(14px);
+    color: rgba($black-lite, .5);
+}
+
+.form-allowed-tags {
+    @extend .comment-notes;
+}
+.form-submit {
+    input {
+        @extend %submit-button-design;
+    }
+}

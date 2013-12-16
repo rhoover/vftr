@@ -1,0 +1,24 @@
+//blog-list
+.post-title {
+    margin-bottom: rhythm(.25, 16px);
+}
+
+//blog-comments
+.comments-area {
+    padding-top: rhythm(1, 16px);
+}
+.comment-list {
+    padding-top: rhythm(1, 16px);
+}
+.comment {
+    padding-bottom: rhythm(.5, 16px);
+}
+.reply {
+    width: 100%;
+}
+.comment-respond {
+    padding-top: rhythm(1, 16px);
+}
+#comment {
+    @extend %textarea-layout;
+}

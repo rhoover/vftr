@@ -32,7 +32,6 @@
 <script src="<?php echo $templateURL ?>/js/vftr-angular/services/moonshine-2013-results.js"></script>
 
 <script src="<?php echo $templateURL ?>/js/vftr-angular/controllers/root.js"></script>
-<!-- <script src="<?php echo $templateURL ?>/js/vftr-angular/controllers/moonshine-2013-results.js"></script> -->
 
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/responsive-trigger.js"></script>
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/mobile-nav-move.js"></script>
@@ -42,10 +41,11 @@
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/meetingmap.js"></script>
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/enduromap.js"></script>
 
-<!-- Production Scripts, Don't Forget rev on vftr.js, grunt-usemin freaks out over php in paths
+<!-- Production Scripts, Don't Forget rev on vftr.js, grunt-usemin freaks out over php in paths. Don't Forget async loading for production:
+    http://www.html5rocks.com/en/tutorials/speed/script-loading/
 <script src="<?php echo $templateURL ?>/libraries/angular/angular.min.js"></script>
 <script src="<?php echo $templateURL ?>/libraries/angular/angular-modules.min.js"></script>
-<script src="<?php echo $templateURL ?>/js/vftr-angular/vftr.min.js"></script>
+<script src="<?php echo $templateURL ?>/js/vftr-angular/vftr.js"></script>
  -->
 
 </body>

@@ -1,11 +1,10 @@
 html {
     @extend %responsive-trigger;
+    background-color: $white;
 }
 .bg-small {
-    // background: url('images/bg-mobile.jpg') no-repeat left top fixed;
-    background: url('images/light_grey.png') repeat left top fixed;
-    // background-size: 100% 100%;
-    background-size: cover;
+    background-color: darken($white, 10%);
+    // @include background-image(linear-gradient(rgba($black, .7), rgba($black, .7) 5%, rgba($black, .2) 15%, $white));
 }
 .bg-medium {
     @extend .bg-small;

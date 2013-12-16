@@ -2,11 +2,13 @@
 /**
  * The Header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * Displays all of the <head> section and everything up till <main>
  *
  * @package vftr
  */
-?><!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> data-ng-app="vftrApp" data-ng-controller="RootCtrl" data-background data-ng-cloak>
 <head>
 
@@ -25,7 +27,7 @@
 
     <!-- Mobile Stuff -->
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 
     <!-- apple stuff -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -70,9 +72,7 @@
 
 <body>
 
-    <?php do_action( 'before' ); ?>
-
-     <header  class="header"><!-- scroll-position="scroll"  ng-class="{header.fixed: scroll > 72, header: scroll <= 72}"-->
+     <header  class="header">
         <span data-backbutton class="mobile-back-button"></span>
         <h1 class="title-small">VFTR</h1>
         <h1 class="title-large">Valley Forge Trail Riders</h1>

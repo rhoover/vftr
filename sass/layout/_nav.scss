@@ -2,27 +2,31 @@
     position: fixed;
     top: rhythm(2.05, 16px);
     height: 100%;
+    @include span-columns(6, 12);
     @include translate3d(-100%, 0, 0);
     @include at-breakpoint($break-to-medium-large) {
         position: relative;
         @include translate3d(0, 0, 0);
-        @include span-columns(20, 20);
-        padding-right: $grid-padding*8;
+        @include span-columns(24, 24);
+        @include pad(0,1);
         margin-top: rhythm(-4.7, 16px);
         z-index: 150;
     }
     @include at-breakpoint($break-to-large) {
-        // height: rhythm(3, 16px);
         @include span-columns(24, 24);
-        padding-right: $grid-padding*8;}
+        @include pad(0,4);
+    }
 }
 .menu-item {
-    @include span-columns(12, 12);
-    @include pad(1,0);
-    padding-top: rhythm(.25, 16px);
-    padding-bottom: rhythm(.25, 16px);
+    // @include span-columns(6, 12);
+    // @include pad(1,0);
+    // padding-top: rhythm(.5, 16px);
+    // padding-bottom: rhythm(.5, 16px);
+    display: block;
+    width: 100%;
+    padding: rhythm(.5, 16px) 0 rhythm(.5, 16px) $grid-padding;
     @include at-breakpoint($break-to-medium-large) {
-        @include span-columns(2 omega, 20);
+        @include span-columns(3 omega, 24);
         padding: rhythm(.25, 16px) 0;
     }
     @include at-breakpoint($break-to-large) {
@@ -34,7 +38,7 @@
     @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
 }
 .navmove, .navmove-add.navmove-add-active {
-  @include translate3d(0%, 0, 0);
+  @include translate3d(0, 0, 0);
 }
 .navmove-remove.navmove-remove-active {
   @include translate3d(-100%, 0, 0);

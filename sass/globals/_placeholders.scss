@@ -1,0 +1,126 @@
+%main {
+    @include container;
+    // @include susy-grid-background;
+    // min-height: 100%;
+    @include at-breakpoint($break-to-medium) {
+        @include container;
+        // @include susy-grid-background;
+    }
+    @include at-breakpoint($break-to-medium-large) {
+        @include container;
+        // @include susy-grid-background;
+    }
+    @include at-breakpoint($break-to-large) {
+        @include container;
+        // @include susy-grid-background;
+    }
+}
+
+%responsive-trigger {
+    &:after {
+        content: "phone";
+        display: none;
+        @include at-breakpoint($break-to-medium) {
+            content: "tablet";
+        }
+        @include at-breakpoint($break-to-medium-large) {
+            content: "small-desktop"
+        }
+        @include at-breakpoint($break-to-large) {
+            content: "large-desktop"
+        }
+    }
+}
+
+%small-menu-icon {
+    &:before {
+        @include adjust-font-size-to(16px);
+        padding-right: $grid-padding;
+        @include at-breakpoint($break-to-medium-large) {
+            display: none;
+        }
+    }
+}
+
+%home-item-design {
+    color: $black;
+    @include adjust-font-size-to(25px);
+    text-align: center;
+    border: .1em solid rgba($green-mute, .5);
+    border-radius: .25em;
+}
+
+%home-item-layout {
+    @include span-columns(12,12);
+    margin-right: 0;
+    margin-bottom: rhythm(1, 16px);
+    padding: $grid-padding/2;
+    min-height: rhythm(5, 16px);
+    @include at-breakpoint($break-to-medium) {
+        @include span-columns(8, 16);
+        @include nth-omega(2n);
+    }
+    @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(6, 24);
+        @include remove-nth-omega(2n); //remove nth-omega from break-to-medium
+        @include nth-omega(4n);
+    }
+    @include at-breakpoint($break-to-large) {
+        @include span-columns(6, 24);
+        @include remove-nth-omega(2n); //remove nth-omega from break-to-medium
+        @include nth-omega(4n);
+    }
+}
+
+%inner-content-design {
+    color: $black-lite;
+    background: rgba($white, .9);
+    border: .1em solid rgba($green-mute, .5);
+    border-radius: .25em;
+}
+
+%info-highlight {
+    font-weight: bold;
+    background: rgba($green-mute, .3);
+    border-radius: .25em;
+    border: .1em solid rgba($green-mute, .5);
+}
+
+%input-design {
+        background: rgba($white, .75);
+        border: .1em solid $green-mute;
+        &:focus {
+            background: rgba($white, 1);
+            border: .2em solid $green-dark;
+        }
+    }
+
+%input-layout {
+    height: rhythm(2, 16px);
+}
+
+%textarea-layout {
+    width: 100%;
+    @include at-breakpoint($break-to-medium-large) {
+        width: 50%;
+    }
+}
+
+%submit-button-design {
+    @include adjust-font-size-to(16px);
+    color: $black;
+    @include background-image(linear-gradient(rgba($green-mute, .4), rgba($green-dark, .4)));
+    border: .1em solid $green-mute;
+    border-radius: .35em;
+    @include box-shadow(.06em .06em 0 rgba($white, .35) inset);
+    @include at-breakpoint($break-to-medium-large) {
+        cursor: pointer;
+        &:hover {
+            @include box-shadow(0 0 .25em rgba($black, .3));
+        }
+    }
+}
+
+%submit-button-layout {
+    padding: rhythm(.25, 16px) $grid-padding/2;
+}

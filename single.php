@@ -6,26 +6,24 @@
  */
 
 get_header(); ?>
+<?php do_action( 'before' ); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<?php get_template_part('content', 'aside'); ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+    <article <?php post_class(); ?>>  <!-- id="post-<?php the_ID(); ?>" -->
 
-			<?php vftr_content_nav( 'nav-below' ); ?>
+        <?php get_template_part( 'content', 'single' ); ?>
+        <?php  // If comments are open or we have at least one comment, load up the comment template
+            if ( comments_open() || '0' != get_comments_number() )
+                comments_template('', true); // ($file, $separate_comments (boolean))
+        ?>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() )
-					comments_template();
-			?>
+    </article>
 
-		<?php endwhile; // end of the loop. ?>
+<?php endwhile; // end of the loop. ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
+
+

@@ -1,8 +1,5 @@
 .event-summary {
-    font-weight: bold;
-    background: rgba($green-mute, .1);
-    border-radius: .25em;
-    border: .1em solid rgba($green-mute, .5);
+    @extend %info-highlight;
 }
 .event-label {
     font-weight: bold;

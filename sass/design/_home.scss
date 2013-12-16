@@ -1,6 +1,6 @@
 .home-page-link {
     @extend %home-item-design;
-    background: rgba($white, .4);
+    background: rgba($white, 1);
     @include transition(border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in);
     &:active {
         background: rgba($white, 1);
@@ -21,7 +21,7 @@
     @extend %home-item-design;
     @include adjust-font-size-to(16px);
     text-align: justify;
-    background: rgba($white, .4);
+    background: rgba($white, 1);
     color: $black-lite;
     @include at-breakpoint($break-to-medium-large) {
         background: rgba($white, .9);

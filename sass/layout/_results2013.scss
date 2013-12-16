@@ -25,6 +25,7 @@
 }
 
 //Courtesy of and inspired by: http://codepen.io/geoffyuen/pen/FCBEg
+// Leaving this here as an example of a Responsive Table as it works
 // .results2013 {
 //     width: 100%;
 //     margin: rhythm(1, 16px) 0;
@@ -104,7 +105,7 @@
     }
 }
 .results-row {
-    height: rhythm(7.75, 16px);
+    height: rhythm(7.7, 16px);
     overflow: hidden;
     @include transition(height .75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
     @include at-breakpoint($break-to-medium-large) {

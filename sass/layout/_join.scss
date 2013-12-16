@@ -1,0 +1,28 @@
+.formcontainer {
+    padding-top: rhythm(1, 16px);
+}
+legend {
+    margin-bottom: rhythm(1, 16px);
+    width: 100%;
+}
+.form-input {
+    line-height: rhythm(2, 16px);
+    margin-bottom: rhythm(1, 16px);
+    input {
+        @extend %input-layout;
+    }
+}
+.form-textarea {
+    margin-bottom: rhythm(1, 16px);
+    textarea {
+        @extend %textarea-layout;
+    }
+}
+.form-option {
+    margin-bottom: rhythm(1, 16px);
+}
+.form-submit {
+    .button {
+        @extend %submit-button-design;
+    }
+}

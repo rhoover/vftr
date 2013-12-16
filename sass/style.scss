@@ -38,6 +38,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "globals/typography";
 @import "globals/vertical-rhythm";
 @import "globals/colors";
+@import "globals/placeholders";
 @import "globals/mixins";
 
 //Layout
@@ -50,6 +51,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "layout/results2013";
 @import "layout/calendar";
 @import "layout/locations";
+@import "layout/join";
+@import "layout/blog-stuff";
 @import "layout/footer";
 
 //Design
@@ -57,11 +60,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "design/body";
 @import "design/header";
 @import "design/nav";
-@import "design/main";
 @import "design/home";
 @import "design/article";
 @import "design/results2013";
 @import "design/calendar";
 @import "design/locations";
+@import "design/join";
+@import "design/blog-stuff";
 @import "design/footer";
 

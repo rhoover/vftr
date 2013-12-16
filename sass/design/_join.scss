@@ -1,0 +1,32 @@
+.formcontainer {
+    border-top: .1em solid $green-mute;
+}
+legend {
+    @extend %info-highlight;
+}
+.required {
+    color: red;
+}
+.form-input {
+    input {
+        @extend %input-design;
+    }
+    .required {
+        color: $black;
+    }
+}
+.form-textarea {
+    textarea {
+        @extend %input-design;
+    }
+    .required {
+        color: $black;
+    }
+}
+.form-submit {
+    .button {
+        @extend %submit-button-design;
+    }
+    // input[type=submit] {
+    // }
+}
