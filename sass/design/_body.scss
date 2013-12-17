@@ -5,8 +5,8 @@ a {
         text-decoration: underline;
     }
     @include at-breakpoint($break-to-medium-large) {
-        &:hover {
-            text-decoration: underline;
+        &:active {
+            text-decoration: none;
         }
     }
 }

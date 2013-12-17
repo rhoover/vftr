@@ -20,6 +20,19 @@
         padding-left: $grid-padding;
     }
 }
+.results-search-input:-ms-input-placeholder {
+    @include adjust-font-size-to(18px);
+    background: transparent;
+    border-top: transparent;
+    border-style: solid;
+    border-color: rgba($green-mute, .5);
+    border-width: .1em;
+    border-radius: .25em;
+    &:focus {
+        outline: 0;
+        background: rgba($green-mute, .08);
+    }
+}
 .results-search-select {
     @include adjust-font-size-to(18px);
     color: $black-lite;
@@ -147,6 +160,12 @@
             text-align: left;
 
         }
+    }
+}
+.results-row-item[data-head="Class"] {
+    font-weight: bold;
+    @include at-breakpoint($break-to-medium-large) {
+        font-weight: normal;
     }
 }
 .results-row-item.hidden {

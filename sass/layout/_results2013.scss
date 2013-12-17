@@ -105,7 +105,7 @@
     }
 }
 .results-row {
-    height: rhythm(7.7, 16px);
+    height: rhythm(7.6, 16px);
     overflow: hidden;
     @include transition(height .75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
     @include at-breakpoint($break-to-medium-large) {

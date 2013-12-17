@@ -22,9 +22,6 @@ article {
     p {
         margin-bottom: rhythm(1, 16px);
     }
-    .meetingmap {
-        margin-bottom: rhythm(1, 16px);
-    }
      @include at-breakpoint($break-to-medium-large) {
         @include span-columns(18 omega, 24);
      }

@@ -8,12 +8,12 @@ angular.module('vftrApp')
         // priority: 1,
         // terminal: true,
         // scope: {}, // {} = isolate, true = child, false/undefined = no change
-        controller: function ($scope, riderjson, $window) {
+        controller: function ($scope, riderjson) {
             riderjson.getRiderData(function (data) {
                 $scope.resultsTable = data;
             });
-            var here = $window.location.href;
-            console.log(here);
+            // var here = $window.location.href;
+            // console.log(here);
         },
         // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
         restrict: 'C', // E = Element, A = Attribute, C = Class, M = Comment

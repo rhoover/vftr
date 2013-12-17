@@ -77,7 +77,7 @@
         <h1 class="title-small">VFTR</h1>
         <h1 class="title-large">Valley Forge Trail Riders</h1>
         <span class="mobile-menu-button" data-ng-click="RootCtrl.moveMenu()"></span>
-    </header><!-- .header -->
+    </header><!-- /.header -->
 
     <?php
         //courtesy of:  http://zoerooney.com/blog/tutorials/removing-list-items-wordpress-menus/
@@ -96,6 +96,6 @@
         // Replace the ><a with nothing (a.k.a. delete) and the li with "a"
         $replace = array('','a');
         echo str_replace( $find, $replace, $cleanermenu );
-    ?><!-- .nav -->
+    ?><!-- /.nav -->
 
     <main class="main">

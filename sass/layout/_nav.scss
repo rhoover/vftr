@@ -18,10 +18,6 @@
     }
 }
 .menu-item {
-    // @include span-columns(6, 12);
-    // @include pad(1,0);
-    // padding-top: rhythm(.5, 16px);
-    // padding-bottom: rhythm(.5, 16px);
     display: block;
     width: 100%;
     padding: rhythm(.5, 16px) 0 rhythm(.5, 16px) $grid-padding;
@@ -33,6 +29,7 @@
         @include span-columns(2 omega, 24);
     }
 }
+
 //AngularJS Mobile Behavior/Animation for Fly-in Menu
 .navmove-add, .navmove-remove {
     @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));

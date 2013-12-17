@@ -6,5 +6,13 @@ angular.module("vftrApp")
         this.moveMenu = function () {
             $scope.moveMenu = !$scope.moveMenu;
         };
+        $scope.moveMeetingMap = false;
+        this.moveMeetingMap = function () {
+            $scope.moveMeetingMap = !$scope.moveMeetingMap;
+        };
+        $scope.moveEnduroMap = false;
+        this.moveEnduroMap = function () {
+            $scope.moveEnduroMap = !$scope.moveEnduroMap;
+        };
         return $scope.RootCtrl = this;
     }]);

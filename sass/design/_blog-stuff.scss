@@ -1,6 +1,8 @@
 //blog list
 .post-title {
-    @extend %info-highlight;
+    // @extend %info-highlight;
+    border-bottom: .06em solid $green-dark;
+    @include adjust-font-size-to(25px);
     a {
         color: $green-dark;
     }
@@ -23,14 +25,22 @@
     border-top: .1em solid $green-dark;
     border-bottom: .1em solid $green-dark;
 }
+.comment-meta{
+    @include adjust-font-size-to(10px);
+    a {
+        color: rgba($green-mute, .5);
+    }
+}
 .comment {
     border-bottom: .1em solid $green-dark;
+    p {
+        @include adjust-font-size-to(12px);
+    }
 }
 .reply {
     text-align: right;
     @include adjust-font-size-to(14px);
 }
-
 .comment-reply-title {
     @extend %info-highlight;
 }

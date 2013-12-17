@@ -1,11 +1,53 @@
-.meetingmap {
+.map-wrapper {
+    position: absolute;
+    top: 0;
     @include span-columns(12, 12);
-    height: rhythm(13, 16px);
+    @include translate3d(-110%, 0, 0);
+    margin-right: 0;
+    z-index: 100;
+     @include at-breakpoint($break-to-medium) {
+        @include span-columns (16, 16);
+     }
      @include at-breakpoint($break-to-medium-large) {
+        position: relative;
+        @include translate3d(0, 0, 0);
+     }
+}
+.mobile-map-close {
+    margin-bottom: 0;
+    padding: rhythm(.5, 16px) 0;
+     @include at-breakpoint($break-to-medium-large) {
+        display: none;
+     }
+}
+.meetingmap {
+    height: rhythm(27, 16px);
+    width: 100%;
+     @include at-breakpoint($break-to-medium) {
+        @include span-columns (16, 16);
+        height: rhythm(32, 16px);
+     }
+    @include at-breakpoint($break-to-medium-large) {
         @include span-columns(24, 24);
         height: rhythm(15, 16px);
+        margin-right: 0;
+        margin-bottom: rhythm(1, 16px);
      }
 }
 .enduromap {
     @extend .meetingmap;
+}
+
+//AngularJS Mobile Behavior/Animation for Fly-in Menu
+.mapsmove-add, .mapsmove-remove {
+    @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+}
+.mapsmove, .mapsmove-add.mapsmove-add-active {
+    @include translate3d(-10%, 0, 0);
+    @include at-breakpoint($break-to-medium) {
+        @include translate3d(-3.5%, 0, 0);
+    }
+}
+.mapsmove-remove.mapsmove-remove-active {
+  @include translate3d(-110%, 0, 0);
 }
