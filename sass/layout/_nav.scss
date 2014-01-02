@@ -17,6 +17,22 @@
         @include pad(0,4);
     }
 }
+.fixed .nav {
+    // @extend .nav;
+    @include at-breakpoint($break-to-medium-large) {
+        position: fixed;
+        @include translate3d(0, 0, 0);
+        @include span-columns(24, 24);
+        @include pad(0,1);
+        margin-top: rhythm(-1, 16px);
+        z-index: 150;
+    }
+    @include at-breakpoint($break-to-large) {
+        @include span-columns(24, 24);
+        @include pad(0,4);
+    }
+}
+
 .menu-item {
     display: block;
     width: 100%;

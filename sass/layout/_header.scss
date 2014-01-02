@@ -13,12 +13,12 @@
         padding-bottom: 0;
     }
 }
-// .header.fixed {
-//     @extend .header;
-//     @include at-breakpoint($break-to-medium-large) {
-//         position: fixed;;
-//     }
-// }
+.fixed .header {
+    @extend .header;
+    @include at-breakpoint($break-to-medium-large) {
+        position: fixed;
+    }
+}
 .mobile-back-button {
     @include span-columns(2, 12);
     &:before {

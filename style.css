@@ -276,17 +276,17 @@ html:after {
 .form-submit .button, .mobile-map-button, .form-submit input {
   font-size: 1em;
   line-height: 1.5em;
-  color: #626262;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(92, 164, 41, 0.4)), color-stop(100%, rgba(0, 109, 68, 0.4)));
-  background-image: -webkit-linear-gradient(rgba(92, 164, 41, 0.4), rgba(0, 109, 68, 0.4));
-  background-image: -moz-linear-gradient(rgba(92, 164, 41, 0.4), rgba(0, 109, 68, 0.4));
-  background-image: -o-linear-gradient(rgba(92, 164, 41, 0.4), rgba(0, 109, 68, 0.4));
-  background-image: linear-gradient(rgba(92, 164, 41, 0.4), rgba(0, 109, 68, 0.4));
+  color: rgba(255, 255, 255, 0.75);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #519024), color-stop(100%, #2e5215));
+  background-image: -webkit-linear-gradient(#519024, #2e5215);
+  background-image: -moz-linear-gradient(#519024, #2e5215);
+  background-image: -o-linear-gradient(#519024, #2e5215);
+  background-image: linear-gradient(#519024, #2e5215);
   border: 0.1em solid #5ca429;
   border-radius: .35em;
-  -webkit-box-shadow: 0.06em 0.06em 0 rgba(255, 255, 255, 0.35) inset;
-  -moz-box-shadow: 0.06em 0.06em 0 rgba(255, 255, 255, 0.35) inset;
-  box-shadow: 0.06em 0.06em 0 rgba(255, 255, 255, 0.35) inset;
+  -webkit-box-shadow: 0.06em 0.06em 0 rgba(255, 255, 255, 0.25) inset;
+  -moz-box-shadow: 0.06em 0.06em 0 rgba(255, 255, 255, 0.25) inset;
+  box-shadow: 0.06em 0.06em 0 rgba(255, 255, 255, 0.25) inset;
 }
 @media (min-width: 64em) {
   .form-submit .button, .mobile-map-button, .form-submit input {
@@ -299,12 +299,21 @@ html:after {
   }
 }
 
+/**
+ * Carbon Fiber background pattern
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author David Kaneda http://www.davidkaneda.com/ for the Sass mixin
+ *
+ * @link http://lea.verou.me/css3patterns/
+ *
+ */
 body {
   font-family: "Fabrica", arial, sans-serif;
   padding-top: 4.5em;
 }
 
-.header {
+.header, .fixed .header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -315,11 +324,17 @@ body {
   z-index: 100;
 }
 @media (min-width: 64em) {
-  .header {
+  .header, .fixed .header {
     height: 6em;
     position: relative;
     padding-top: 0;
     padding-bottom: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .fixed .header {
+    position: fixed;
   }
 }
 
@@ -433,6 +448,33 @@ body {
   }
 }
 
+@media (min-width: 64em) {
+  .fixed .nav {
+    position: fixed;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    width: 100%;
+    float: left;
+    margin-right: 0.84034%;
+    padding-left: 0%;
+    padding-right: 4.20168%;
+    margin-top: -1.5em;
+    z-index: 150;
+  }
+}
+@media (min-width: 85em) {
+  .fixed .nav {
+    width: 100%;
+    float: left;
+    margin-right: 0.84034%;
+    padding-left: 0%;
+    padding-right: 16.80672%;
+  }
+}
+
 .menu-item {
   display: block;
   width: 100%;
@@ -503,16 +545,27 @@ body {
   margin-bottom: 1.5em;
 }
 
-.inner-sidebar {
+.inner-sidebar, .fixed .inner-sidebar {
   display: none;
 }
 @media (min-width: 64em) {
-  .inner-sidebar {
+  .inner-sidebar, .fixed .inner-sidebar {
     display: inline-block;
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     padding: 1.5em 1em;
+  }
+}
+
+@media (min-width: 64em) {
+  .fixed .inner-sidebar {
+    position: fixed;
+    width: 15.96639%;
+    float: left;
+    margin-right: 0.84034%;
+    padding: 1.5em 1em;
+    margin-top: 0.75em;
   }
 }
 
@@ -863,7 +916,15 @@ html {
 }
 
 .bg-small, .bg-medium {
-  background-color: #e6e6e6;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 3, color-stop(66.66667%, #213c14), color-stop(100%, rgba(22, 41, 13, 0))), -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 3, color-stop(66.66667%, #213c14), color-stop(100%, rgba(22, 41, 13, 0))), -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 3, color-stop(66.66667%, rgba(255, 255, 255, 0.3)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 3, color-stop(66.66667%, rgba(255, 255, 255, 0.3)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-radial-gradient(#213c14 2px, rgba(22, 41, 13, 0) 3px), -webkit-radial-gradient(#213c14 2px, rgba(22, 41, 13, 0) 3px), -webkit-radial-gradient(rgba(255, 255, 255, 0.3) 2px, rgba(255, 255, 255, 0) 3px), -webkit-radial-gradient(rgba(255, 255, 255, 0.3) 2px, rgba(255, 255, 255, 0) 3px);
+  background-image: -moz-radial-gradient(#213c14 2px, rgba(22, 41, 13, 0) 3px), -moz-radial-gradient(#213c14 2px, rgba(22, 41, 13, 0) 3px), -moz-radial-gradient(rgba(255, 255, 255, 0.3) 2px, rgba(255, 255, 255, 0) 3px), -moz-radial-gradient(rgba(255, 255, 255, 0.3) 2px, rgba(255, 255, 255, 0) 3px);
+  background-image: -o-radial-gradient(#213c14 2px, rgba(22, 41, 13, 0) 3px), -o-radial-gradient(#213c14 2px, rgba(22, 41, 13, 0) 3px), -o-radial-gradient(rgba(255, 255, 255, 0.3) 2px, rgba(255, 255, 255, 0) 3px), -o-radial-gradient(rgba(255, 255, 255, 0.3) 2px, rgba(255, 255, 255, 0) 3px);
+  background-image: radial-gradient(#213c14 2px, rgba(22, 41, 13, 0) 3px), radial-gradient(#213c14 2px, rgba(22, 41, 13, 0) 3px), radial-gradient(rgba(255, 255, 255, 0.3) 2px, rgba(255, 255, 255, 0) 3px), radial-gradient(rgba(255, 255, 255, 0.3) 2px, rgba(255, 255, 255, 0) 3px);
+  background-repeat: repeat;
+  background-position: 0 0, 8px 8px, 0 1px, 8px 9px;
+  background-color: #2f561c;
+  background-size: 16px 16px;
 }
 
 .bg-small-desktop, .bg-large-desktop {
@@ -884,13 +945,13 @@ a:active {
   }
 }
 
-.header {
+.header, .fixed .header {
   color: #d6d273;
   background-color: rgba(76, 135, 34, 0.95);
   border-bottom: 0.1em solid rgba(46, 82, 21, 0.75);
 }
 @media (min-width: 64em) {
-  .header {
+  .header, .fixed .header {
     border-top: 0.1em solid rgba(98, 98, 98, 0.65);
     border-bottom: 0.1em solid rgba(98, 98, 98, 0.65);
     -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);

@@ -40,10 +40,12 @@ module.exports = function (grunt) {
                         'js/vftr-angular/services/moonshine-2013-results.js',
                         'js/vftr-angular/controllers/root.js',
                         'js/vftr-angular/directives/responsive-trigger.js',
+                        'js/vftr-angular/directives/fixed-elements.js',
                         'js/vftr-angular/directives/mobile-nav-move.js',
                         'js/vftr-angular/directives/mobile-backbutton.js',
                         'js/vftr-angular/directives/menu-item-fade.js',
                         'js/vftr-angular/directives/moonshine2013.js',
+                        'js/vftr-angular/directives/mobile-maps-move.js',
                         'js/vftr-angular/directives/meetingmap.js',
                         'js/vftr-angular/directives/enduromap.js'
                         ],

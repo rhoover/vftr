@@ -108,11 +108,11 @@
 
 %submit-button-design {
     @include adjust-font-size-to(16px);
-    color: $black;
-    @include background-image(linear-gradient(rgba($green-mute, .4), rgba($green-dark, .4)));
+    color: rgba($white, .75);
+    @include background-image(linear-gradient(darken($green-mute, 5%), darken($green-mute, 20%)));
     border: .1em solid $green-mute;
     border-radius: .35em;
-    @include box-shadow(.06em .06em 0 rgba($white, .35) inset);
+    @include box-shadow(.06em .06em 0 rgba($white, .25) inset);
     @include at-breakpoint($break-to-medium-large) {
         cursor: pointer;
         &:hover {

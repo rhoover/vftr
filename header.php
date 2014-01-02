@@ -9,7 +9,7 @@
 ?>
 
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> data-ng-app="vftrApp" data-ng-controller="RootCtrl" data-background data-ng-cloak>
+<html <?php language_attributes(); ?> data-ng-app="vftrApp" data-ng-controller="RootCtrl" data-background>
 <head>
 
     <?php $styleURL = get_bloginfo('template_url'); ?>
@@ -70,7 +70,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body data-fixed-header ng-class="{fixed: fixMe}">
 
      <header  class="header">
         <span data-backbutton class="mobile-back-button"></span>

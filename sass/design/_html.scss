@@ -3,7 +3,8 @@ html {
     background-color: $white;
 }
 .bg-small {
-    background-color: darken($white, 10%);
+    @include background-carbon-fiber();
+    // background-color: darken($white, 10%);
     // @include background-image(linear-gradient(rgba($black, .7), rgba($black, .7) 5%, rgba($black, .2) 15%, $white));
 }
 .bg-medium {
