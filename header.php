@@ -11,7 +11,9 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-ng-app="vftrApp" data-ng-controller="RootCtrl" data-background>
 <head>
-
+    <!--[if lt IE 9]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
     <?php $styleURL = get_bloginfo('template_url'); ?>
     <!-- build:css style.css -->
     <link href="<?php echo $styleURL ?>/style.css" rel="stylesheet" />
@@ -70,7 +72,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body data-fixed-header ng-class="{fixed: fixMe}">
+<body data-fixed-header> <!-- ng-class="{fixed: fixMe}" -->
 
      <header  class="header">
         <span data-backbutton class="mobile-back-button"></span>

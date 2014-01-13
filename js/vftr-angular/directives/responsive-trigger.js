@@ -12,16 +12,16 @@ angular.module('vftrApp')
                 // console.log(result);
                 switch (result) {
                     case "phone" :
-                    element.addClass("bg-small");
+                        element.addClass("bg-small");
                     break;
                     case "tablet" :
-                    element.addClass("bg-medium");
+                        element.addClass("bg-medium");
                     break;
                     case "small-desktop" :
-                    element.addClass("bg-small-desktop");
+                        element.addClass("bg-small-desktop");
                     break;
                     case "large-desktop" :
-                    element.addClass("bg-large-desktop");
+                        element.addClass("bg-large-desktop");
                     break;
                 }
             }

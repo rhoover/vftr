@@ -16,3 +16,27 @@ article {
         font-weight: bold;
     }
 }
+
+.results-splash-item {
+    text-align: center;
+     @include at-breakpoint($break-to-medium-large) {
+        text-align: left;
+     }
+    .results-icon {
+        font-size: 5em;
+         @include at-breakpoint($break-to-medium-large) {
+            font-size: 8em;
+         }
+    }
+    &:nth-child(even) {
+         @include at-breakpoint($break-to-medium-large) {
+            text-align: right;
+         }
+     }
+     .event {
+        &:hover {
+            text-decoration: underline;
+        }
+     }
+
+}

@@ -39,7 +39,7 @@
 
 <script src="<?php echo $templateURL ?>/js/vftr-angular/controllers/root.js"></script>
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/responsive-trigger.js"></script>
-<script src="<?php echo $templateURL ?>/js/vftr-angular/directives/fixed-elements.js"></script>
+<!-- <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/fixed-elements.js"></script> -->
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/mobile-nav-move.js"></script>
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/mobile-backbutton.js"></script>
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/menu-item-fade.js"></script>

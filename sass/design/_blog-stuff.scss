@@ -5,6 +5,9 @@
     @include adjust-font-size-to(25px);
     a {
         color: $green-dark;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 .post-meta{

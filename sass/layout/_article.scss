@@ -6,15 +6,15 @@
         padding: rhythm(1,16px) $grid-padding;
      }
 }
-.fixed .inner-sidebar {
-    @extend .inner-sidebar;
-    @include at-breakpoint($break-to-medium-large) {
-        position: fixed;
-        @include span-columns(4, 24);
-        padding: rhythm(1,16px) $grid-padding;
-        margin-top: rhythm(.5, 16px);
-    }
-}
+// .fixed .inner-sidebar {
+//     // @extend .inner-sidebar;
+//     @include at-breakpoint($break-to-medium-large) {
+//         position: fixed;
+//         @include span-columns(4, 24);
+//         padding: rhythm(1,16px) $grid-padding;
+//         margin-top: rhythm(.5, 16px);
+//     }
+// }
 .inner-page-link {
     @include span-columns(6,6);
     padding: rhythm(.5, 16px) 0;
@@ -35,3 +35,24 @@ article {
         @include span-columns(18 omega, 24);
      }
  }
+
+ .results-splash-item {
+    min-height: rhythm(6, 16px);
+    .results-icon {
+        @include span-columns(12, 12);
+        margin-top: rhythm(.25, 16px);
+        margin-bottom: rhythm(.25, 16px);
+         @include at-breakpoint($break-to-medium-large) {
+            @include span-columns(4, 18);
+         }
+    }
+    &:nth-child(even) {
+        .results-icon {
+             @include at-breakpoint($break-to-medium-large) {
+                @include span-columns(4 omega, 18);
+                padding-left: $grid-padding/4;
+             }
+        }
+    }
+
+}
