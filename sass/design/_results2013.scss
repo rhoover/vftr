@@ -107,7 +107,7 @@
         background: rgba($green-mute, .2);
         border-top: solid .1em $green-mute;
         border-bottom: solid .1em $green-mute;
-        @include adjust-font-size-to(14px);
+        @include adjust-font-size-to(12px);
     }
 }
 .summary-header-item {

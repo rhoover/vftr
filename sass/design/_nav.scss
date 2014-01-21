@@ -66,3 +66,12 @@
         }
     }
 }
+.facebook-icon {
+    @include icon('before', true, 'facebook');
+    &:before {
+        -webkit-tap-highlight-color: desaturate($yellow, 35%);
+        @include at-breakpoint($break-to-medium-large) {
+            display: none;
+        }
+    }
+}

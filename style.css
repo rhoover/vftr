@@ -315,15 +315,29 @@ body {
 
 /* Alignment */
 .alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em;
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 37.5em) {
+  .alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+  }
 }
 
 .alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em;
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 37.5em) {
+  .alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+  }
 }
 
 .aligncenter {
@@ -612,6 +626,21 @@ article p {
     float: right;
     margin-right: 0;
     padding-left: 0.25em;
+  }
+}
+
+.leaders {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  margin-bottom: 1.5em;
+}
+@media (min-width: 64em) {
+  .leaders {
+    width: 100%;
+    float: left;
+    margin-right: 1.1236%;
+    margin-bottom: 1.5em;
   }
 }
 
@@ -1169,6 +1198,28 @@ a:active {
   }
 }
 
+.facebook-icon:before {
+  content: "\e602";
+  color: #d6d273;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: "vftr", arial, sans-serif;
+  padding-right: 0.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: none;
+  speak: none;
+}
+.facebook-icon:before {
+  -webkit-tap-highlight-color: #cdca7c;
+}
+@media (min-width: 64em) {
+  .facebook-icon:before {
+    display: none;
+  }
+}
+
 .home-page-link {
   background: white;
   -webkit-transition: border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in;
@@ -1375,6 +1426,10 @@ article h2 {
   font-weight: bold;
 }
 
+.leaders {
+  text-align: center;
+}
+
 .results-splash-item {
   text-align: center;
 }
@@ -1466,8 +1521,8 @@ article h2 {
     background: rgba(92, 164, 41, 0.2);
     border-top: solid 0.1em #5ca429;
     border-bottom: solid 0.1em #5ca429;
-    font-size: 0.875em;
-    line-height: 1.71429em;
+    font-size: 0.75em;
+    line-height: 2em;
   }
 }
 

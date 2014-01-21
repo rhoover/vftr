@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 
     //because you can't abstract too much
     var vftrConfig = {
-        production: 'production'
+        production: 'staging'
     }
 
     grunt.initConfig({

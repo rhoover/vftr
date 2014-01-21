@@ -17,6 +17,10 @@ article {
     }
 }
 
+.leaders {
+    text-align: center;
+}
+
 .results-splash-item {
     text-align: center;
      @include at-breakpoint($break-to-medium-large) {

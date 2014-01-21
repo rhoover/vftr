@@ -56,3 +56,12 @@ article {
     }
 
 }
+
+.leaders {
+    @include span-columns(12,12);
+    margin-bottom: rhythm(1, 16px);
+    @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(18, 18);
+        margin-bottom: rhythm(1, 16px);
+    }
+}
