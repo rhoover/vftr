@@ -1220,6 +1220,28 @@ a:active {
   }
 }
 
+.photos-icon:before {
+  content: "\e608";
+  color: #d6d273;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: "vftr", arial, sans-serif;
+  padding-right: 0.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: none;
+  speak: none;
+}
+.photos-icon:before {
+  -webkit-tap-highlight-color: #cdca7c;
+}
+@media (min-width: 64em) {
+  .photos-icon:before {
+    display: none;
+  }
+}
+
 .home-page-link {
   background: white;
   -webkit-transition: border 0.3s ease-in, box-shadow 0.3s ease-in, background 0.3s ease-in;

@@ -47,32 +47,30 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="Valley Forge Trail Riders">
 
-    <!-- Facebook OpenGraph Meta Properties
-    <meta property="og:title" content="The Vermont Brewers Association" />
+    <!-- Facebook OpenGraph Meta Properties -->
+    <meta property="og:title" content="The Valley Forge Trail Roders" />
     <meta property="og:type" content="organization"/>
-    <meta property="og:url" content="http://www.vermontbrewers.com"/>
-    <meta property="og:site_name" content="The Vermont Brewers Association - Small State - Big Beer"/>
-    <meta property="og:description" content="Proud To Support Vermont's Craft Brewers"/>
-    <meta property="og:email" content="info@vermontbrewers.com"/>
-    <meta property="og:phone_number" content="802-885-1262"/>
-    -->
-    <!-- icons
+    <meta property="og:url" content="http://www.vftr.org"/>
+    <meta property="og:site_name" content="The Valley Forge Trail Riders - Home of the World Famous Moonshine Enduro"/>
+    <meta property="og:description" content="Supporting Trail Riding"/>
+
+    <!-- icons -->
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
     <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
-    -->
-    <!-- icon actually for android
+
+    <!-- icon actually for android -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
-    -->
+
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
     <?php wp_head(); ?>
 </head>
 
-<body data-fixed-header> <!-- ng-class="{fixed: fixMe}" -->
+<body>
 
      <header  class="header">
         <span data-backbutton class="mobile-back-button"></span>
@@ -93,10 +91,10 @@
             'items_wrap' => '<nav class="%2$s" data-nav="moveMenu">%3$s</nav>', // replacing the ul with nav, remove id too
             'echo' => false, // don't display it just yet, instead we're storing it in the variable $cleanermenu
         ) );
-        // Find the closing bracket of each li and the opening of the link (><a), then all instances of "li"
-        $find = array('><a','li');
-        // Replace the ><a with nothing (a.k.a. delete) and the li with "a"
-        $replace = array('','a');
+        // Find the closing bracket of each li and the opening of the link (><a), then all instances of "<li"
+        $find = array('><a','<li');
+        // Replace the ><a with nothing (a.k.a. delete) and the "<li" with "<a"
+        $replace = array('','<a');
         echo str_replace( $find, $replace, $cleanermenu );
     ?><!-- /.nav -->
 

@@ -75,3 +75,12 @@
         }
     }
 }
+.photos-icon {
+    @include icon('before', true, 'photos');
+    &:before {
+        -webkit-tap-highlight-color: desaturate($yellow, 35%);
+        @include at-breakpoint($break-to-medium-large) {
+            display: none;
+        }
+    }
+}
