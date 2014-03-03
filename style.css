@@ -159,7 +159,10 @@ html {
 
 html:after {
   content: "phone";
-  display: none;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: -1000px;
 }
 @media (min-width: 37.5em) {
   html:after {

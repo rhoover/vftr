@@ -47,6 +47,7 @@
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/mobile-maps-move.js"></script>
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/meetingmap.js"></script>
 <script src="<?php echo $templateURL ?>/js/vftr-angular/directives/enduromap.js"></script>
+<script src="<?php echo $templateURL ?>/js/vftr-angular/directives/moonshine-2014-entry.js"></script>
 
 <!-- Production Scripts, Don't Forget rev on vftr.js, grunt-usemin freaks out over php in paths. Don't Forget async loading for production:
     http://www.html5rocks.com/en/tutorials/speed/script-loading/

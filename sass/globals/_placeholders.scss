@@ -19,7 +19,11 @@
 %responsive-trigger {
     &:after {
         content: "phone";
-        display: none;
+        // display: none;
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -1000px;
         @include at-breakpoint($break-to-medium) {
             content: "tablet";
         }

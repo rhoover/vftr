@@ -30,6 +30,6 @@ The Valley Forge Trail Riders, formed in 1973, is the home of the annual Moonshi
 <a href="#" class="home-page-link"><h2 class="videos-icon home-sub-header">Videos</h2>
     <p class="promo">Lean Back</p>
 </a>
-<a href="#" class="home-page-link"><h2 class="form-icon home-sub-header">Entry Form</h2>
-    <p class="promo">Choose A VFTR Event</p>
+<a href=" http://vftr/?page_id=151" class="home-page-link"><h2 class="form-icon home-sub-header">Entry Form</h2>
+    <p class="promo">Moonshine 2014</p>
 </a>

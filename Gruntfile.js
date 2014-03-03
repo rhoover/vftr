@@ -46,7 +46,8 @@ module.exports = function (grunt) {
                         'js/vftr-angular/directives/moonshine2013.js',
                         'js/vftr-angular/directives/mobile-maps-move.js',
                         'js/vftr-angular/directives/meetingmap.js',
-                        'js/vftr-angular/directives/enduromap.js'
+                        'js/vftr-angular/directives/enduromap.js',
+                        'js/vftr-angular/directives/moonshine-2014-entry.js'
                         ],
                     dest: '<%= vftr.production %>/js/vftr-angular/vftr.js'
                 },
