@@ -48,7 +48,6 @@
 
 %home-item-design {
     color: $black;
-    @include adjust-font-size-to(25px);
     text-align: center;
     border: .1em solid rgba($green-mute, .5);
     border-radius: .25em;
@@ -63,13 +62,9 @@
     @include at-breakpoint($break-to-medium) {
         @include span-columns(8, 16);
         @include nth-omega(2n);
+    min-height: rhythm(7, 16px);
     }
     @include at-breakpoint($break-to-medium-large) {
-        @include span-columns(6, 24);
-        @include remove-nth-omega(2n); //remove nth-omega from break-to-medium
-        @include nth-omega(4n);
-    }
-    @include at-breakpoint($break-to-large) {
         @include span-columns(6, 24);
         @include remove-nth-omega(2n); //remove nth-omega from break-to-medium
         @include nth-omega(4n);

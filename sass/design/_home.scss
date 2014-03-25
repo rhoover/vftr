@@ -34,7 +34,13 @@
         }
     }
 }
-
+.home-sub-header {
+    // @include adjust-font-size-to(25px);
+    font-size: $base-font-size*1.5;
+    // @include at-breakpoint($break-to-medium-large) {
+    //     font-size: $base-font-size*2;
+    // }
+}
 .promo {
     color: $black-lite;
 }
