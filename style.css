@@ -785,20 +785,27 @@ article p {
   }
 }
 
-.event-summary {
-  padding: 0.375em 0 0.375em 0.5em;
+.tribe-events-ajax-loading {
+  display: none;
+}
+
+.tribe-events-first {
+  margin-top: 1.5em;
+}
+
+.tribe-events-notices {
+  padding: 1.5em 0;
   margin-bottom: 1.5em;
 }
 
-.event-description {
+.tribe-events-single-section-title {
   margin-bottom: 1.5em;
 }
 
-.vevent {
-  margin-bottom: 1.5em;
-}
-.vevent:last-of-type {
-  margin-bottom: 0;
+.tribe-events-list-separator-month {
+  width: 100%;
+  float: left;
+  margin-right: 1.1236%;
 }
 
 .map-wrapper {
@@ -1670,6 +1677,29 @@ article h2 {
 
 .event-label {
   font-weight: bold;
+}
+
+.tribe-events-notices {
+  background-color: rgba(98, 98, 98, 0.25);
+  border-radius: .25em;
+  border: 0.1em solid rgba(98, 98, 98, 0.5);
+}
+
+.tribe-events-single-section-title {
+  border-bottom: 0.1em solid rgba(98, 98, 98, 0.5);
+  font-weight: bold;
+}
+
+.tribe-events-list-separator-month {
+  border-bottom: 0.1em solid rgba(98, 98, 98, 0.5);
+}
+
+.url:hover {
+  text-decoration: underline;
+}
+
+.tribe-events-back a:hover {
+  text-decoration: underline;
 }
 
 .mobile-map-button {

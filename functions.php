@@ -163,3 +163,9 @@ add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
 function my_css_attributes_filter($var) {
     return is_array($var) ? array_intersect($var, array('menu-item','current-menu-item', 'home-icon','sample-icon','mail-icon')) : '';
 }
+
+function replace_tribe_events_calendar_stylesheet() {
+   $tribeStyle = get_bloginfo('template_url') . '/style.css';
+   return $tribeStyle;
+}
+add_filter('tribe_events_stylesheet_url', 'replace_tribe_events_calendar_stylesheet');

@@ -4,3 +4,29 @@
 .event-label {
     font-weight: bold;
 }
+.tribe-events-notices {
+    background-color: rgba($black, .25);
+    border-radius: .25em;
+    border: .1em solid rgba($black, .5);
+}
+.tribe-events-single-section-title {
+    border-bottom: .1em solid rgba($black, .5);
+    font-weight: bold;
+}
+.tribe-events-list-separator-month {
+    // background-color: rgba($black, .25);
+    // border-radius: .25em;
+    border-bottom: .1em solid rgba($black, .5);
+}
+.url {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.tribe-events-back {
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

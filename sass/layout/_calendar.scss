@@ -1,13 +1,17 @@
-.event-summary {
-    padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) $grid-padding/2;
+.tribe-events-ajax-loading {
+    display: none;
+}
+.tribe-events-first {
+    margin-top: rhythm(1, 16px);
+}
+.tribe-events-notices {
+    padding: rhythm(1, 16px) 0;
     margin-bottom: rhythm(1, 16px);
 }
-.event-description {
+.tribe-events-single-section-title {
     margin-bottom: rhythm(1, 16px);
 }
-.vevent {
-    margin-bottom: rhythm(1, 16px);
-    &:last-of-type {
-        margin-bottom: 0;
-    }
+.tribe-events-list-separator-month {
+    // padding-right: $grid-padding*4;
+    @include span-columns (18, 18);
 }
