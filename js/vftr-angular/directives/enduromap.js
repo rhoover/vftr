@@ -1,34 +1,25 @@
 'use strict'
 
 angular.module('vftrApp')
-    .directive('enduroMap', [function () {
+    .directive('enduroMap', ['googleMap', function (googleMap) {
         return {
-            restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
-            link: function(scope, element, attrs) {
+            restrict: 'A',
+            compile: function (tElement, tAttributes, transclude) {
+                return function (scope, element, attrs) {
 
                 var lat = 40.8557649;
                 var lon = -76.167078;
 
                 var myMapOptions, marker, map;
-                var myMapOptions = {
-                    zoom: 10,
-                    center: new google.maps.LatLng(lat, lon),
-                    mapTypeControl: true,
-                    mapTypeControlOptions: {
-                        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-                    },
-                    zoomControl: false,
-                    // zoomControlOptions: {
-                    //     style: google.maps.ZoomControlStyle.SMALL
-                    // },
-                    streetViewControl: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
-                map = new google.maps.Map(element[0], myMapOptions);
-                marker = new google.maps.Marker ({
-                    position: new google.maps.LatLng(lat, lon),
-                    map: map
-                });
-            }
-        };
+                var div = element[0];
+
+                myMapOptions = googleMap.mapOptions(10, lat, lon);
+
+                map= googleMap.mapCreator(div, myMapOptions);
+
+                marker = googleMap.mapMarker(map, lat, lon);
+
+                } //end return function
+            } //end compile
+        }; //end return
     }]);

@@ -7,13 +7,13 @@ angular.module('vftrApp')
             link: function(scope, element, attrs) {
 
                 element.bind('mouseenter', function () {
-                    element.parent().children().addClass('fade');
                     element.addClass('hover');
+                    element.parent().children().addClass('fade');
                 });
 
                 element.bind('mouseleave', function () {
-                    element.parent().children().removeClass('fade');
                     element.removeClass('hover');
+                    element.parent().children().removeClass('fade');
                 });
 
             }

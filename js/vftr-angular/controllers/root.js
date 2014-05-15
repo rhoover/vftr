@@ -14,5 +14,9 @@ angular.module("vftrApp")
         this.moveEnduroMap = function () {
             $scope.moveEnduroMap = !$scope.moveEnduroMap;
         };
+        $scope.moveScramblesMap = false;
+        this.moveScramblesMap = function () {
+            $scope.moveScramblesMap = !$scope.moveScramblesMap;
+        };
         return $scope.RootCtrl = this;
     }]);

@@ -1,14 +1,14 @@
 'use strict'
 
 angular.module('vftrApp')
-    .directive('meetingMap', ['googleMap', function (googleMap) {
+    .directive('scramblesMap', ['googleMap', function (googleMap) {
         return {
             restrict: 'A',
             compile: function (tElement, tAttributes, transclude) {
                 return function (scope, element, attrs) {
 
-                    var lat = 40.099369;
-                    var lon = -75.475854;
+                    var lat = 40.8125881;
+                    var lon = -76.1416033;
 
                     var myMapOptions, marker, map;
                     var div = element[0];
