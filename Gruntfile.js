@@ -38,6 +38,7 @@ module.exports = function (grunt) {
                     src: [
                         'js/vftr-angular/app.js',
                         'js/vftr-angular/services/moonshine-2013-results.js',
+                        'js/vftr-angular/services/googlemap.js',
                         'js/vftr-angular/controllers/root.js',
                         'js/vftr-angular/directives/responsive-trigger.js',
                         'js/vftr-angular/directives/mobile-nav-move.js',
@@ -47,6 +48,7 @@ module.exports = function (grunt) {
                         'js/vftr-angular/directives/mobile-maps-move.js',
                         'js/vftr-angular/directives/meetingmap.js',
                         'js/vftr-angular/directives/enduromap.js',
+                        'js/vftr-angular/directives/scramblesmap.js',
                         'js/vftr-angular/directives/moonshine-2014-entry.js'
                         ],
                     dest: '<%= vftr.production %>/js/vftr-angular/vftr.js'

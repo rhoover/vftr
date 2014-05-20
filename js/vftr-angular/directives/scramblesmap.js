@@ -7,8 +7,8 @@ angular.module('vftrApp')
             compile: function (tElement, tAttributes, transclude) {
                 return function (scope, element, attrs) {
 
-                    var lat = 40.8125881;
-                    var lon = -76.1416033;
+                    var lat = 40.79674;
+                    var lon = -76.12071;
 
                     var myMapOptions, marker, map;
                     var div = element[0];
